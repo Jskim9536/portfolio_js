@@ -35,7 +35,7 @@ export default function HeroSection() {
           className="text-base md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-8 md:mb-10 font-light"
         >
           안녕하세요, <br />
-          일을 되게 만드는 서비스 기획자 <br />
+          비즈니스 성장을 만들어내는 기획자(PM/PO) <br />
           김준석입니다.
         </motion.p>
         <motion.div {...fadeUp(0.55)} className="flex flex-wrap gap-3 md:gap-4">
