@@ -30,7 +30,7 @@ export default function PhilosophySection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {approaches.map((item, i) => (
               <AnimateIn key={item.num} delay={0.1 + i * 0.1}>
-                <div className="bg-surface-container-lowest p-5 md:p-6 rounded-xl border border-outline-variant/10 shadow-sm h-full">
+                <div className="bg-surface-container-lowest p-5 md:p-6 rounded-xl border border-outline-variant/10 shadow-sm h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
                   <span className="text-primary font-medium mb-2 block text-sm">{item.num}</span>
                   <h3 className="font-medium text-base md:text-lg mb-1 md:mb-2">{item.title}</h3>
                   <p className="text-sm text-on-surface-variant font-light">{item.desc}</p>
