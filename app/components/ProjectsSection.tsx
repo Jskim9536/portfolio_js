@@ -136,7 +136,7 @@ export default function ProjectsSection() {
                   src="https://lh3.googleusercontent.com/aida/ADBb0uhEosKvxY4smSuF3Spp7O9dldkwhV3RUzMDt9d-n8F78ZLpHFCiIRL_ZGOFcxNc_wgP0OpWRhFIBzSVz4fm5uF4kTJ_R4Bl3jiDXo9tKp65wwJ2MAlPU-J_PWjrRWQPSQ4fZ5Hp1qQn2pcwaIJ2IL6cnDqKWzcgXHcHd0VJClQZOy921mMZU71FUjGYbaXcmekwy1Awn-iRL5Sz2rGVD6qNIO9CzzlVGSqMtr1nDuESifNxKTlyUsl295UNcUXfuPNQQr8RMkJCzQ"
                   alt="Business Logo"
                   fill
-                  className="object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                  className="object-cover transition-all duration-500"
                   unoptimized
                 />
               </div>
