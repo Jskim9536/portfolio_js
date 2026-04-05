@@ -1,3 +1,5 @@
+import AnimateIn from "./AnimateIn";
+
 const careers = [
   {
     period: "2026.01 ~ Now",
@@ -31,36 +33,39 @@ const careers = [
 
 export default function CareerTimeline() {
   return (
-    <section className="py-24 border-t border-outline-variant/10 max-w-7xl mx-auto px-8">
+    <section className="py-16 md:py-24 border-t border-outline-variant/10 max-w-7xl mx-auto px-5 md:px-8">
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-4">
-          <h2 className="text-4xl font-medium tracking-tight text-[#1a2540] mb-8">
-            Career Timeline
-          </h2>
+          <AnimateIn>
+            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-[#1a2540] mb-6 md:mb-8">
+              Career Timeline
+            </h2>
+          </AnimateIn>
         </div>
         <div className="col-span-12 md:col-span-8">
-          <div className="space-y-12">
+          <div className="space-y-8 md:space-y-12">
             {careers.map((item, index) => (
-              <div
-                key={item.company}
-                className={`relative pl-8 ${
-                  index < careers.length - 1
-                    ? "before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-48px] before:w-[1px] before:bg-outline-variant/30"
-                    : ""
-                }`}
-              >
+              <AnimateIn key={item.company} delay={index * 0.1} direction="left">
                 <div
-                  className={`absolute left-[-4px] top-2 w-[10px] h-[10px] rounded-full ${
-                    item.isActive ? "bg-primary" : "bg-outline-variant"
+                  className={`relative pl-6 md:pl-8 ${
+                    index < careers.length - 1
+                      ? "before:content-[''] before:absolute before:left-0 before:top-2 before:bottom-[-32px] md:before:bottom-[-48px] before:w-[1px] before:bg-outline-variant/30"
+                      : ""
                   }`}
-                ></div>
-                <span className="text-sm font-medium text-secondary mb-1 block">
-                  {item.period}
-                </span>
-                <h4 className="text-xl font-medium mb-1 text-[#1a2540]">{item.company}</h4>
-                <p className="text-on-surface-variant font-medium mb-2">{item.role}</p>
-                <p className="text-sm text-outline font-light">{item.desc}</p>
-              </div>
+                >
+                  <div
+                    className={`absolute left-[-4px] top-2 w-[10px] h-[10px] rounded-full ${
+                      item.isActive ? "bg-primary" : "bg-outline-variant"
+                    }`}
+                  />
+                  <span className="text-xs md:text-sm font-medium text-secondary mb-1 block">
+                    {item.period}
+                  </span>
+                  <h4 className="text-base md:text-xl font-medium mb-1 text-[#1a2540]">{item.company}</h4>
+                  <p className="text-sm text-on-surface-variant font-medium mb-1">{item.role}</p>
+                  <p className="text-xs md:text-sm text-outline font-light">{item.desc}</p>
+                </div>
+              </AnimateIn>
             ))}
           </div>
         </div>
