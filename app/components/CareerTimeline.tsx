@@ -26,7 +26,7 @@ const careers = [
     period: "2020.08 ~ 2021.07",
     company: "현대자동차 (Hyundai Motor Company)",
     role: "연구원",
-    desc: "차세대 인포테인먼트 시스템 UX 기획 및 플랫폼 관리",
+    desc: "차세대 인포테인먼트 시스템 개발 및 플랫폼 관리",
     isActive: false,
   },
 ];
