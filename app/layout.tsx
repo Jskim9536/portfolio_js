@@ -1,23 +1,10 @@
 import type { Metadata } from "next";
-import { Epilogue, Inter } from "next/font/google";
 import "./globals.css";
 
-const epilogue = Epilogue({
-  variable: "--font-epilogue",
-  subsets: ["latin"],
-  weight: ["700", "800", "900"],
-});
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  weight: ["300", "400", "600"],
-});
-
 export const metadata: Metadata = {
-  title: "NARRATIVE — Editorial Portfolio",
+  title: "JUNSEOK KIM | PM/PO Portfolio",
   description:
-    "A minimalist approach to high-end digital experiences, focusing on intent, space, and the narrative that lives between the pixels.",
+    "안녕하세요, 일을 되게 만드는 서비스 기획자 김준석입니다.",
 };
 
 export default function RootLayout({
@@ -26,16 +13,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="ko">
       <head>
+        <link
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+          rel="stylesheet"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body
-        className={`${epilogue.variable} ${inter.variable} bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary`}
-      >
+      <body className="bg-surface text-on-surface">
         {children}
       </body>
     </html>

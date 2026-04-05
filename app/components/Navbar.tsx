@@ -1,34 +1,34 @@
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full z-50 glass-nav">
-      <div className="flex justify-between items-center px-10 py-6 max-w-[1440px] mx-auto">
-        <div className="text-2xl font-black tracking-tighter text-primary font-headline uppercase">
-          NARRATIVE
+    <header className="sticky top-0 z-50 glass-nav shadow-[0px_20px_40px_rgba(25,28,29,0.04)]">
+      <nav className="flex justify-between items-center w-full px-8 py-6 max-w-7xl mx-auto">
+        <div className="text-xl font-bold tracking-tighter text-[#1a2540] uppercase">
+          JUNSEOK KIM
         </div>
-        <div className="hidden md:flex items-center gap-12">
+        <div className="hidden md:flex items-center gap-8 font-medium text-[#1a2540] tracking-tight">
           <a
-            className="font-headline tracking-tighter font-bold uppercase text-primary border-b-2 border-primary pb-1"
-            href="#"
+            className="text-primary border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-300"
+            href="#work"
           >
             Work
           </a>
           <a
-            className="font-headline tracking-tighter font-bold uppercase text-white/70 hover:text-white transition-colors duration-300"
-            href="#"
+            className="text-[#1a2540] opacity-80 hover:text-primary transition-colors duration-300"
+            href="#about"
           >
             About
           </a>
           <a
-            className="font-headline tracking-tighter font-bold uppercase text-white/70 hover:text-white transition-colors duration-300"
-            href="#"
+            className="text-[#1a2540] opacity-80 hover:text-primary transition-colors duration-300"
+            href="#contact"
           >
             Contact
           </a>
         </div>
-        <button className="metallic-gradient text-on-primary px-8 py-3 font-headline font-bold uppercase tracking-widest text-xs rounded-lg hover:opacity-80 transition-opacity">
+        <button className="gradient-primary text-white px-6 py-2.5 rounded-lg font-medium tracking-tight transition-all hover:shadow-lg active:scale-90">
           Let&apos;s Talk
         </button>
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 }

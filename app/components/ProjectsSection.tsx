@@ -1,106 +1,213 @@
 import Image from "next/image";
 
-const projects = [
-  {
-    id: 1,
-    title: "NEON ARCHIVE",
-    category: "Brand Identity",
-    year: "2024",
-    colSpan: "md:col-span-8",
-    aspectClass: "aspect-video",
-    frameClass: "asymmetric-frame-br",
-    showArrow: true,
-    offsetClass: "",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBaLGG-9m2M6gImPyyqmT0U2b3VJpEBfUib9Eps_GPIx9A0Ibjlyn1XS5EyFrfvh9cjPBWf8eFTtUn0obgAjKDeofLlluYeWgVfJWgNscjJ2RhAmpOexv_7PP7TRQQRzifVqlK0RSy_v5-To_AT3Dg-RlYuPymKBwVmAxa6Sr9KBz59_alnDfeYnbNI1tcZL9e2CNDpe7lfnBN4dCqS4_H6vFynYU7KFa9JMX5Dthtwu1WOfuaGKIlBaXONXX_EX_bwTQKdiVQzi-8",
-    alt: "Close-up of minimalist high-tech electronic components with soft purple neon lighting",
-  },
-  {
-    id: 2,
-    title: "ETHOS MAG",
-    category: "Editorial",
-    year: "2023",
-    colSpan: "md:col-span-4",
-    aspectClass: "aspect-[3/4]",
-    frameClass: "asymmetric-frame-tl",
-    showArrow: false,
-    offsetClass: "pt-20",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAQhdLvIiNN1_eheFH3Zbbsd0d4Mp8jtS7h_2sQ4LflFgOVheo3fLaZxQtF2s_1HKogidD1TjcTLDtgF4Jv_VeIFkGnba4ALd4Ivc0Fa2UCCbPU_lLUMlXaTQSrcO53yAcgI_4teWJT0fDpAtXAQTYbE9Ecphpw69-hYB9SEgU0XcL2UQ0Z7TIINf2mMmQh3fDUJwcRYda-bXRJao5EXc2E3FKAVaX6_xbVaTGrJL6yVgBbvZsmW28X_qwvBH27VieQgopmU3B9U-o",
-    alt: "Minimalist editorial layout of a fashion magazine with bold black serif typography",
-  },
-  {
-    id: 3,
-    title: "GLASS CORE",
-    category: "Web Experience",
-    year: "2024",
-    colSpan: "md:col-span-5",
-    aspectClass: "aspect-square",
-    frameClass: "asymmetric-frame-tr",
-    showArrow: false,
-    offsetClass: "",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuBqanhAWLuTHqixOuK7-cWFNkjoRuQvT5NUVrHPb3q7h2eaQ-WQ-9JmTQQxMZvZJ-T-0OT94ruV6qSZCjqcWTOFsUUVPUQRAPW1QzK-759YTNowFH3TQ0G3auzCr1jx7Cdu7xn2UPYM1Rtl8aG_tUQh0Gmf6dm07qB1IDsyjfrCf0_Qjm8hywetUEh5pwYOecIIESdky3zqlp9LgXxkFJ-mQ2_Joo7Pn01pna_gizmxSl1xFVzrqpzmCfAmBYTzNYL2AZYITJwRHlY",
-    alt: "Sleek glass-like geometric sculptures floating in a dark studio space with soft lavender ambient light",
-  },
-  {
-    id: 4,
-    title: "VELVET FLOW",
-    category: "Digital Art",
-    year: "2023",
-    colSpan: "md:col-span-7",
-    aspectClass: "aspect-[16/10]",
-    frameClass: "asymmetric-frame-br",
-    showArrow: true,
-    offsetClass: "md:mt-[-80px]",
-    src: "https://lh3.googleusercontent.com/aida-public/AB6AXuAD6ewgDuU4bovpiGykJDbyYkgUQl_KBGBE_0WBIC2idrFR9qG-g-RjQa6Mb2SuJ1j3t_1GMMGRr_PU8lrY6BOtrgNBQsbVYMtACUbjn_I6Yi9MoZ8ybBHMWbP1TcFCF7No_IhqA1Lf9o4WP1gI2fbk1tl6zoLFvhLNuoScJlRmEIIpswhhy7mbhYyFrP5CNYMKVuV8KzZRdY167ElixDysxv0Y695cvaibXvQRJb9E1Q29gnHgJMgXSruzMdz0FhVKDQ6o237a6fU",
-    alt: "Macro photo of liquid paint swirled in deep purple and silver tones creating a tactile marble texture",
-  },
-];
-
 export default function ProjectsSection() {
   return (
-    <section className="py-32 px-10 max-w-[1440px] mx-auto">
-      <div className="flex justify-between items-end mb-20">
-        <h2 className="font-headline text-5xl font-black tracking-tighter uppercase">
-          Selected <br /> Works
-        </h2>
-        <div className="font-label text-xs tracking-widest text-on-surface-variant uppercase pb-2">
-          01 — 04
-        </div>
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`${project.colSpan} ${project.offsetClass} group cursor-pointer`}
-          >
-            <div
-              className={`relative ${project.aspectClass} overflow-hidden ${project.frameClass} bg-surface-container`}
-            >
+    <section className="py-24 max-w-7xl mx-auto px-8" id="work">
+      <h2 className="text-4xl font-medium tracking-tight text-[#1a2540] mb-12">
+        Selected Works
+      </h2>
+      <div className="grid grid-cols-12 gap-6">
+        {/* Project 1 - MYCLE Partner Growth */}
+        <div className="col-span-12 md:col-span-8 relative group overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/10 card-hover-effect">
+          <div className="p-8 flex flex-col h-full">
+            <div className="flex justify-between items-start mb-12">
+              <div>
+                <h3 className="text-2xl font-medium mb-2 text-[#1a2540]">
+                  MYCLE — Partner Growth &amp; Funnel Optimization
+                </h3>
+                <p className="text-on-surface-variant mb-4 font-light">
+                  마카롱팩토리 입점 퍼널 개선 및 파트너 네트워크 확장
+                </p>
+                <div className="flex gap-2">
+                  <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">PO</span>
+                  <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Growth</span>
+                  <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">UX</span>
+                </div>
+              </div>
+              <span className="text-sm font-medium text-secondary">2024</span>
+            </div>
+            <div className="grid grid-cols-3 gap-4 mb-8">
+              <div className="bg-surface-container-low p-4 rounded-lg">
+                <p className="text-[10px] font-medium text-primary mb-1 uppercase">Growth</p>
+                <p className="text-2xl font-light-custom text-[#1a2540]">+70%</p>
+              </div>
+              <div className="bg-surface-container-low p-4 rounded-lg">
+                <p className="text-[10px] font-medium text-primary mb-1 uppercase">Conversion</p>
+                <p className="text-2xl font-light-custom text-[#1a2540]">+361%</p>
+              </div>
+              <div className="bg-surface-container-low p-4 rounded-lg">
+                <p className="text-[10px] font-medium text-primary mb-1 uppercase">Revenue</p>
+                <p className="text-2xl font-light-custom text-[#1a2540]">+50%</p>
+              </div>
+            </div>
+            <div className="mt-auto overflow-hidden rounded-lg aspect-video relative">
               <Image
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src={project.src}
-                alt={project.alt}
+                src="https://lh3.googleusercontent.com/aida/ADBb0uizBOvQ1CK6wz9ZeuwmzwcAtTM3HVP2bd4aq_5k_6SOW6nRsiLD7aQTbHsstzNkP7x7pL0oFgA2fHCqjM-kETYo_WZMSbSqG-u1aNWpBx8WymQcPZ07rrBbg5b2hz6hCz4WokRiT-ZPaIE5IAtrKb_Ylvc-IMndsvHMcKVf1NFi5YRjgMGLEOWGekvmDI-gfyDEjUBIs0DjN_1DsB2F8frXMU17KEtBLdN4aMQecbY9VC521vCXsAYcRgw_PYYMuMO-GVlHJ-VgIw"
+                alt="Dashboard visualization"
                 fill
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
                 unoptimized
               />
-              <div className="absolute inset-0 bg-surface/20 group-hover:bg-transparent transition-colors duration-500" />
-            </div>
-            <div className={`mt-6 ${project.showArrow ? "flex justify-between items-start" : ""}`}>
-              <div>
-                <h3 className="font-headline text-2xl font-bold tracking-tight mb-2">
-                  {project.title}
-                </h3>
-                <p className="text-on-surface-variant font-label text-sm uppercase tracking-widest">
-                  {project.category} — {project.year}
-                </p>
-              </div>
-              {project.showArrow && (
-                <span className="material-symbols-outlined text-primary text-3xl">
-                  arrow_outward
-                </span>
-              )}
             </div>
           </div>
-        ))}
+        </div>
+
+        {/* Project 2 - MYCLE Quality System */}
+        <div className="col-span-12 md:col-span-4 group overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/10 card-hover-effect relative">
+          <div className="p-8 h-full flex flex-col">
+            <span className="text-xs font-medium text-secondary mb-2">2024</span>
+            <h3 className="text-xl font-medium mb-4 text-[#1a2540]">
+              MYCLE — Quality System (PQI) &amp; VoC Reduction
+            </h3>
+            <p className="text-sm text-on-surface-variant mb-6 font-light">
+              운영 효율화를 위한 품질 지표 설계 및 앱 개선
+            </p>
+            <div className="flex flex-col gap-3 mb-6">
+              <div className="flex justify-between border-b border-outline-variant/10 pb-2">
+                <span className="text-sm font-light">VoC Reduction</span>
+                <span className="text-sm font-medium text-primary">-33.3%</span>
+              </div>
+              <div className="flex justify-between border-b border-outline-variant/10 pb-2">
+                <span className="text-sm font-light">PQI Increase</span>
+                <span className="text-sm font-medium text-primary">+16%</span>
+              </div>
+            </div>
+            <div className="mt-auto flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Data</span>
+              <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Ops</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Project 3 - SOOJIB Global */}
+        <div className="col-span-12 md:col-span-4 group overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/10 card-hover-effect relative">
+          <div className="p-8 h-full flex flex-col">
+            <span className="text-xs font-medium text-secondary mb-2">2025</span>
+            <h3 className="text-xl font-medium mb-4 text-[#1a2540]">
+              SOOJIB — Global Market Expansion
+            </h3>
+            <p className="text-sm text-on-surface-variant mb-6 font-light">
+              영미권 6개국 확장 및 물류 프로세스 최적화
+            </p>
+            <div className="gradient-primary text-white p-4 rounded-lg mb-6">
+              <p className="text-[10px] font-medium uppercase opacity-80">Revenue</p>
+              <p className="text-2xl font-light-custom">3x Growth</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Global</span>
+              <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Ops</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Project 4 - SOOJIB Zero-to-One */}
+        <div className="col-span-12 md:col-span-8 relative group overflow-hidden rounded-xl bg-surface-container-lowest border border-outline-variant/10 card-hover-effect">
+          <div className="p-8 flex flex-col h-full md:flex-row gap-8">
+            <div className="md:w-1/2">
+              <span className="text-xs font-medium text-secondary mb-2 block">2025</span>
+              <h3 className="text-2xl font-medium mb-4 text-[#1a2540]">
+                SOOJIB — Zero-to-One New Business
+              </h3>
+              <p className="text-on-surface-variant mb-6 leading-relaxed font-light">
+                EU 뷰티 인증 대행 및 K-POP OST 공급망 신사업 런칭. 시장
+                조사부터 물류 구축까지 엔드투엔드 주도.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span className="text-sm font-medium">EU Beauty Compliance Launch</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="material-symbols-outlined text-primary text-lg">check_circle</span>
+                  <span className="text-sm font-medium">K-POP OST Supply Chain Setup</span>
+                </div>
+              </div>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Zero-to-One</span>
+                <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">New Biz</span>
+              </div>
+            </div>
+            <div className="md:w-1/2 aspect-square bg-[#111111] rounded-lg overflow-hidden relative p-8">
+              <Image
+                src="https://lh3.googleusercontent.com/aida/ADBb0uhEosKvxY4smSuF3Spp7O9dldkwhV3RUzMDt9d-n8F78ZLpHFCiIRL_ZGOFcxNc_wgP0OpWRhFIBzSVz4fm5uF4kTJ_R4Bl3jiDXo9tKp65wwJ2MAlPU-J_PWjrRWQPSQ4fZ5Hp1qQn2pcwaIJ2IL6cnDqKWzcgXHcHd0VJClQZOy921mMZU71FUjGYbaXcmekwy1Awn-iRL5Sz2rGVD6qNIO9CzzlVGSqMtr1nDuESifNxKTlyUsl295UNcUXfuPNQQr8RMkJCzQ"
+                alt="Business Logo"
+                fill
+                className="object-cover grayscale opacity-50 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500"
+                unoptimized
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Award - L'Oreal */}
+        <div className="col-span-12 relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
+          <div className="p-12 grid grid-cols-12 gap-6 items-center">
+            <div className="col-span-12 md:col-span-6">
+              <span className="text-primary-fixed-dim font-medium tracking-widest text-xs uppercase mb-4 block">
+                AWARD WINNING PROJECT
+              </span>
+              <h3 className="text-4xl font-medium mb-4">
+                L&apos;Oreal BigBang Digital Sector Winner
+              </h3>
+              <span className="text-secondary-fixed text-sm font-light mb-4 block">2025</span>
+              <p className="text-surface-variant/80 text-lg mb-8 leading-relaxed font-light">
+                Beauty Tech &amp; AI 오픈 이노베이션 프로그램 우승. 딥러닝
+                기반 디지털 솔루션 기획 및 기술 확장성 검증.
+              </p>
+              <div className="flex gap-4">
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Innovation</span>
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">AI/Digital</span>
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">B2B Strategy</span>
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-6 relative">
+              <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
+                <Image
+                  src="https://lh3.googleusercontent.com/aida/ADBb0ujZkSk_bSSszd0n7JbBSghKnrFLLy47TkmFCgYGZnI_FrJzlS049y0PscBJkLw7_Jsx9O7EM_HLQDJv0FfV7oNyIXermB40PDz8LPXoPJf6RX-kFrDKz7Yt37PzD1ESdXHySxf7WFDHGMkUduMLrluu83a_ltt2eoA4AtCJgdFWuyhYyEVUgE9qrJh6Ip1t-rTMzbRv5jj62JqYPNOUfkI6dfjr1rstiGguw0C2NudhIYk4bWwN9cfNBAuRFEPOTyKPH93gYHvpcw"
+                  alt="L'Oreal Award Ceremony"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Award - Hyundai */}
+        <div className="col-span-12 relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
+          <div className="p-12 grid grid-cols-12 gap-6 items-center">
+            <div className="col-span-12 md:col-span-6 md:order-2">
+              <span className="text-primary-fixed-dim font-medium tracking-widest text-xs uppercase mb-4 block">
+                AWARD WINNING PROJECT
+              </span>
+              <h3 className="text-4xl font-medium mb-4">
+                Hyundai Motor Group Hack-A-Road 1st Place
+              </h3>
+              <span className="text-secondary-fixed text-sm font-light mb-4 block">2017</span>
+              <p className="text-surface-variant/80 text-lg mb-8 leading-relaxed font-light">
+                현대자동차그룹 해커톤 &apos;해커로드 2017&apos; 대상 수상.
+                차세대 자율주행 커넥티드카 UX 및 서비스 컨셉 제안.
+              </p>
+              <div className="flex gap-4">
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Grand Prize</span>
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Mobility</span>
+                <span className="px-4 py-2 border border-surface-variant/20 rounded-full text-xs font-medium">UX Concept</span>
+              </div>
+            </div>
+            <div className="col-span-12 md:col-span-6 md:order-1 relative">
+              <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
+                <Image
+                  src="https://lh3.googleusercontent.com/aida/ADBb0uhvYcR-4QtOXN1ZZNNzqR-XwqFU4FNxakEfr_7jzKxA7Fkmr0cJwARO30w3vSZM1yxF1NaHIOmO99l0SIQzZQQemMfcmJjU2EbHZC9vw1Vi4izVu3KDBNH_2B5DrUvPVCSV9n0yQd3iaWG4VHSmIciJOgObDFgaIVfT-Xtb0gylpZcm9Z-JJVXKlueJAIJpggqY61Zrc2iBgw0alQAgUFig_HLugeOOmdKkoMlQdXNM_foButQss1o9DE775huYZ8hJsBHbBI-pQw"
+                  alt="Hyundai Hackathon Award"
+                  fill
+                  className="object-cover"
+                  unoptimized
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
