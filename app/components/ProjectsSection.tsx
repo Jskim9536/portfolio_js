@@ -229,11 +229,11 @@ export default function ProjectsSection() {
                   AWARD WINNING PROJECT
                 </span>
                 <h3 className="text-2xl md:text-4xl font-medium mb-2 md:mb-4">
-                  Inter-University Rowing Competition, 3rd Place Overall
+                  제11회 대학조정대회 (Inter-University Rowing Competition)
                 </h3>
                 <span className="text-secondary-fixed text-sm font-light mb-3 md:mb-4 block">2016</span>
                 <p className="text-surface-variant/80 text-sm md:text-lg mb-5 md:mb-8 leading-relaxed font-light">
-                  제11회 대학조정대회에서 팀을 이끌어 대학 종합 3위를 달성. 2016년 7월 29일부터 7월 30일까지 미사리 조정경기장에서 열린 Inter-University Rowing Competition 참가.
+                  제11회 대학조정대회에서 팀을 이끌어 대학 종합 3위를 달성.
                 </p>
                 <div className="flex flex-wrap gap-2 md:gap-4 mb-5 md:mb-8">
                   <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Team Leadership</span>
