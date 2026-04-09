@@ -72,6 +72,14 @@ export default function ProjectsSection() {
                   <span className="text-sm font-medium text-primary">+16%</span>
                 </div>
               </div>
+              <div className="mb-4 overflow-hidden rounded-lg border border-[#d6e3f0] bg-[#f4f8fc] aspect-[4/3] relative">
+                <Image
+                  src="/img/mycle-voc-trend.svg"
+                  alt="Line chart showing MYCLE VoC complaints declining by 33 percent after PQI improvements"
+                  fill
+                  className="object-cover"
+                />
+              </div>
               <div className="mt-auto flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Data</span>
                 <span className="px-3 py-1 bg-surface-container-high rounded-full text-[10px] font-medium uppercase">Ops</span>

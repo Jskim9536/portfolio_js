@@ -1,0 +1,49 @@
+<svg width="900" height="640" viewBox="0 0 900 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="640" rx="40" fill="#F4F8FC"/>
+  <rect x="44" y="44" width="812" height="552" rx="30" fill="url(#panel)"/>
+  <path d="M148 152V500H752" stroke="#A8BCD3" stroke-width="4" stroke-linecap="round"/>
+  <path d="M148 232H752" stroke="#D7E4F0" stroke-width="2" stroke-dasharray="10 10"/>
+  <path d="M148 314H752" stroke="#D7E4F0" stroke-width="2" stroke-dasharray="10 10"/>
+  <path d="M148 396H752" stroke="#D7E4F0" stroke-width="2" stroke-dasharray="10 10"/>
+  <path d="M148 478H752" stroke="#D7E4F0" stroke-width="2" stroke-dasharray="10 10"/>
+  <text x="110" y="162" fill="#7B92AA" font-family="Arial, sans-serif" font-size="20" text-anchor="end">100</text>
+  <text x="110" y="245" fill="#7B92AA" font-family="Arial, sans-serif" font-size="20" text-anchor="end">80</text>
+  <text x="110" y="327" fill="#7B92AA" font-family="Arial, sans-serif" font-size="20" text-anchor="end">60</text>
+  <text x="110" y="409" fill="#7B92AA" font-family="Arial, sans-serif" font-size="20" text-anchor="end">40</text>
+  <text x="110" y="491" fill="#7B92AA" font-family="Arial, sans-serif" font-size="20" text-anchor="end">20</text>
+  <text x="150" y="548" fill="#7B92AA" font-family="Arial, sans-serif" font-size="22">Jan</text>
+  <text x="300" y="548" fill="#7B92AA" font-family="Arial, sans-serif" font-size="22">Feb</text>
+  <text x="450" y="548" fill="#7B92AA" font-family="Arial, sans-serif" font-size="22">Mar</text>
+  <text x="600" y="548" fill="#7B92AA" font-family="Arial, sans-serif" font-size="22">Apr</text>
+  <text x="724" y="548" fill="#7B92AA" font-family="Arial, sans-serif" font-size="22">After PQI</text>
+  <path d="M148 214C198 220 230 230 278 258C318 281 358 307 414 334C468 361 514 382 569 410C620 435 669 454 752 458" stroke="url(#line)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M148 214C198 220 230 230 278 258C318 281 358 307 414 334C468 361 514 382 569 410C620 435 669 454 752 458V500H148V214Z" fill="url(#area)" opacity="0.9"/>
+  <circle cx="148" cy="214" r="16" fill="#1A4B7A"/>
+  <circle cx="278" cy="258" r="16" fill="#225F98"/>
+  <circle cx="414" cy="334" r="16" fill="#2F73B3"/>
+  <circle cx="569" cy="410" r="16" fill="#3E88CB"/>
+  <circle cx="752" cy="458" r="18" fill="#0D3B66"/>
+  <path d="M752 458L752 214" stroke="#89B4D9" stroke-width="4" stroke-dasharray="12 12"/>
+  <path d="M148 214L752 458" stroke="#C5D8EA" stroke-width="4" stroke-dasharray="8 12" opacity="0.8"/>
+  <rect x="566" y="112" width="214" height="92" rx="24" fill="#0D3B66"/>
+  <text x="590" y="150" fill="#B9D3EA" font-family="Arial, sans-serif" font-size="18" font-weight="700">VoC complaints</text>
+  <text x="590" y="182" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="38" font-weight="700">-33%</text>
+  <rect x="172" y="104" width="172" height="72" rx="20" fill="#FFFFFF"/>
+  <text x="196" y="148" fill="#5C7692" font-family="Arial, sans-serif" font-size="22" font-weight="700">Baseline</text>
+  <rect x="650" y="356" width="164" height="70" rx="20" fill="#E4F0FA"/>
+  <text x="674" y="399" fill="#1A4B7A" font-family="Arial, sans-serif" font-size="22" font-weight="700">After PQI</text>
+  <defs>
+    <linearGradient id="panel" x1="450" y1="44" x2="450" y2="596" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FBFDFF"/>
+      <stop offset="1" stop-color="#EEF4FA"/>
+    </linearGradient>
+    <linearGradient id="line" x1="148" y1="214" x2="752" y2="458" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1A4B7A"/>
+      <stop offset="1" stop-color="#4F97D9"/>
+    </linearGradient>
+    <linearGradient id="area" x1="450" y1="214" x2="450" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#A7C8E8" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#A7C8E8" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
