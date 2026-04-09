@@ -220,6 +220,50 @@ export default function ProjectsSection() {
           </div>
         </AnimateIn>
 
+        {/* Award - Rowing */}
+        <AnimateIn className="col-span-12" delay={0.2}>
+          <div className="relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
+            <div className="p-6 md:p-12 grid grid-cols-12 gap-4 md:gap-6 items-center">
+              <div className="col-span-12 md:col-span-6">
+                <span className="text-primary-fixed-dim font-medium tracking-widest text-[10px] uppercase mb-3 block">
+                  AWARD WINNING PROJECT
+                </span>
+                <h3 className="text-2xl md:text-4xl font-medium mb-2 md:mb-4">
+                  Inter-University Rowing Competition, 3rd Place Overall
+                </h3>
+                <span className="text-secondary-fixed text-sm font-light mb-3 md:mb-4 block">2016</span>
+                <p className="text-surface-variant/80 text-sm md:text-lg mb-5 md:mb-8 leading-relaxed font-light">
+                  제11회 대학조정대회에서 팀을 이끌어 대학 종합 3위를 달성. 2016년 7월 29일부터 7월 30일까지 미사리 조정경기장에서 열린 Inter-University Rowing Competition 참가.
+                </p>
+                <div className="flex flex-wrap gap-2 md:gap-4 mb-5 md:mb-8">
+                  <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Team Leadership</span>
+                  <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">3rd Place Overall</span>
+                  <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Rowing</span>
+                </div>
+                <a
+                  href="https://news.unist.ac.kr/kor/20160802-03/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-sm md:text-base font-medium text-white/90 hover:text-white transition-colors"
+                >
+                  Read Article
+                  <span className="material-symbols-outlined text-base">north_east</span>
+                </a>
+              </div>
+              <div className="col-span-12 md:col-span-6 relative">
+                <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
+                  <Image
+                    src="/img/rowing.jpg"
+                    alt="UNIST rowing competition team"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </AnimateIn>
+
       </div>
     </section>
   );
