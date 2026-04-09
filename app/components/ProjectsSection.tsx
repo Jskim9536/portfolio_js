@@ -205,6 +205,15 @@ export default function ProjectsSection() {
                   <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">Mobility</span>
                   <span className="px-3 md:px-4 py-1.5 md:py-2 border border-surface-variant/20 rounded-full text-xs font-medium">UX Concept</span>
                 </div>
+                <a
+                  href="https://www.yna.co.kr/view/AKR20171128110700057"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 mt-5 md:mt-8 text-sm md:text-base font-medium text-white/90 hover:text-white transition-colors"
+                >
+                  Read Article
+                  <span className="material-symbols-outlined text-base">north_east</span>
+                </a>
               </div>
               <div className="col-span-12 md:col-span-6 md:order-1 relative">
                 <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
