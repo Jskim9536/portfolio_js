@@ -36,14 +36,14 @@ function LogoTrack() {
       {companies.map((company) => (
         <div
           key={company.name}
-          className="flex shrink-0 items-center justify-center px-8 md:px-14"
+          className="flex shrink-0 items-center justify-center px-5 md:px-14"
         >
           <Image
             src={company.logo}
             alt={company.name}
             width={company.width}
             height={company.height}
-            className="h-auto max-h-8 w-auto object-contain opacity-100 md:max-h-10"
+            className="h-auto max-h-6 w-auto object-contain opacity-100 md:max-h-10"
           />
         </div>
       ))}
