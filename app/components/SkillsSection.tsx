@@ -12,6 +12,20 @@ export default function SkillsSection() {
             <div className="space-y-5 md:space-y-6">
               <div>
                 <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
+                  AI
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["claude-code", "codex", "ollama"].map((tool, i) => (
+                    <AnimateIn key={tool} delay={0.35 + i * 0.07}>
+                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
+                        {tool}
+                      </span>
+                    </AnimateIn>
+                  ))}
+                </div>
+              </div>
+              <div>
+                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
                   Tools &amp; Tech
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -33,20 +47,6 @@ export default function SkillsSection() {
                     <AnimateIn key={comp} delay={0.2 + i * 0.07}>
                       <span className="px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20">
                         {comp}
-                      </span>
-                    </AnimateIn>
-                  ))}
-                </div>
-              </div>
-              <div>
-                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
-                  AI
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {["claude-code", "codex", "ollama"].map((tool, i) => (
-                    <AnimateIn key={tool} delay={0.35 + i * 0.07}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
-                        {tool}
                       </span>
                     </AnimateIn>
                   ))}
