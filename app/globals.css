@@ -88,9 +88,44 @@ body {
   background: linear-gradient(135deg, #2563eb 0%, #004ac6 100%);
 }
 
-
 .font-light-custom {
   font-weight: 200;
+}
+
+@keyframes logo-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.logo-marquee {
+  overflow: hidden;
+}
+
+.logo-marquee__track {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 1rem;
+  animation: logo-marquee-scroll 42s linear infinite;
+  will-change: transform;
+}
+
+@media (min-width: 768px) {
+  .logo-marquee__track {
+    gap: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-marquee__track {
+    animation: none;
+  }
 }
 
 .material-symbols-outlined {
