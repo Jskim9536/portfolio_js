@@ -17,7 +17,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["claude-code", "codex", "ollama"].map((tool, i) => (
                     <AnimateIn key={tool} delay={0.35 + i * 0.07}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
+                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_14px_30px_rgba(26,37,64,0.12)]">
                         {tool}
                       </span>
                     </AnimateIn>
@@ -31,7 +31,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["SQL", "Python", "GA4", "Figma", "Notion"].map((tool, i) => (
                     <AnimateIn key={tool} delay={i * 0.05}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
+                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_14px_30px_rgba(26,37,64,0.12)]">
                         {tool}
                       </span>
                     </AnimateIn>
@@ -45,7 +45,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["Agile/Sprint", "Lean Startup", "Data-Driven"].map((comp, i) => (
                     <AnimateIn key={comp} delay={0.2 + i * 0.07}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20">
+                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20 transition-all duration-300 hover:-translate-y-1 hover:scale-105 hover:shadow-[0_14px_30px_rgba(26,37,64,0.14)]">
                         {comp}
                       </span>
                     </AnimateIn>
@@ -62,7 +62,7 @@ export default function SkillsSection() {
             </h3>
             <div className="space-y-3 md:space-y-4">
               <AnimateIn delay={0.2}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
+                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-[0_22px_48px_rgba(26,37,64,0.12)]">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     L&apos;Oreal BigBang Digital Winner
                   </h4>
@@ -72,7 +72,7 @@ export default function SkillsSection() {
                 </div>
               </AnimateIn>
               <AnimateIn delay={0.3}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
+                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-[0_22px_48px_rgba(26,37,64,0.12)]">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     Hyundai Hackathon 1st Place
                   </h4>
@@ -82,7 +82,7 @@ export default function SkillsSection() {
                 </div>
               </AnimateIn>
               <AnimateIn delay={0.4}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
+                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-1.5 hover:scale-[1.02] hover:shadow-[0_22px_48px_rgba(26,37,64,0.12)]">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     UNIST (울산과학기술원)
                   </h4>
