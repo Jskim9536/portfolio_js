@@ -41,11 +41,10 @@ export default function ProjectsSection() {
               </div>
               <div className="mt-auto overflow-hidden rounded-lg aspect-video relative">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida/ADBb0uizBOvQ1CK6wz9ZeuwmzwcAtTM3HVP2bd4aq_5k_6SOW6nRsiLD7aQTbHsstzNkP7x7pL0oFgA2fHCqjM-kETYo_WZMSbSqG-u1aNWpBx8WymQcPZ07rrBbg5b2hz6hCz4WokRiT-ZPaIE5IAtrKb_Ylvc-IMndsvHMcKVf1NFi5YRjgMGLEOWGekvmDI-gfyDEjUBIs0DjN_1DsB2F8frXMU17KEtBLdN4aMQecbY9VC521vCXsAYcRgw_PYYMuMO-GVlHJ-VgIw"
-                  alt="Dashboard visualization"
+                  src="/img/mycle-partners.png"
+                  alt="MYCLE partners dashboard"
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
-                  unoptimized
                 />
               </div>
             </div>
@@ -133,11 +132,10 @@ export default function ProjectsSection() {
               </div>
               <div className="md:w-1/2 aspect-video md:aspect-square bg-[#111111] rounded-lg overflow-hidden relative">
                 <Image
-                  src="https://lh3.googleusercontent.com/aida/ADBb0uhEosKvxY4smSuF3Spp7O9dldkwhV3RUzMDt9d-n8F78ZLpHFCiIRL_ZGOFcxNc_wgP0OpWRhFIBzSVz4fm5uF4kTJ_R4Bl3jiDXo9tKp65wwJ2MAlPU-J_PWjrRWQPSQ4fZ5Hp1qQn2pcwaIJ2IL6cnDqKWzcgXHcHd0VJClQZOy921mMZU71FUjGYbaXcmekwy1Awn-iRL5Sz2rGVD6qNIO9CzzlVGSqMtr1nDuESifNxKTlyUsl295UNcUXfuPNQQr8RMkJCzQ"
-                  alt="Business Logo"
+                  src="/img/soojib-public.jpg"
+                  alt="SOOJIB public launch visual"
                   fill
                   className="object-cover transition-all duration-500"
-                  unoptimized
                 />
               </div>
             </div>
@@ -168,11 +166,10 @@ export default function ProjectsSection() {
               <div className="col-span-12 md:col-span-6 relative">
                 <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida/ADBb0ujZkSk_bSSszd0n7JbBSghKnrFLLy47TkmFCgYGZnI_FrJzlS049y0PscBJkLw7_Jsx9O7EM_HLQDJv0FfV7oNyIXermB40PDz8LPXoPJf6RX-kFrDKz7Yt37PzD1ESdXHySxf7WFDHGMkUduMLrluu83a_ltt2eoA4AtCJgdFWuyhYyEVUgE9qrJh6Ip1t-rTMzbRv5jj62JqYPNOUfkI6dfjr1rstiGguw0C2NudhIYk4bWwN9cfNBAuRFEPOTyKPH93gYHvpcw"
+                    src="/img/bigbang-startup.jpg"
                     alt="L'Oreal Award Ceremony"
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
               </div>
@@ -204,11 +201,10 @@ export default function ProjectsSection() {
               <div className="col-span-12 md:col-span-6 md:order-1 relative">
                 <div className="aspect-video rounded-lg overflow-hidden shadow-2xl relative">
                   <Image
-                    src="https://lh3.googleusercontent.com/aida/ADBb0uhvYcR-4QtOXN1ZZNNzqR-XwqFU4FNxakEfr_7jzKxA7Fkmr0cJwARO30w3vSZM1yxF1NaHIOmO99l0SIQzZQQemMfcmJjU2EbHZC9vw1Vi4izVu3KDBNH_2B5DrUvPVCSV9n0yQd3iaWG4VHSmIciJOgObDFgaIVfT-Xtb0gylpZcm9Z-JJVXKlueJAIJpggqY61Zrc2iBgw0alQAgUFig_HLugeOOmdKkoMlQdXNM_foButQss1o9DE775huYZ8hJsBHbBI-pQw"
+                    src="/img/hyundai_hack_a_road.jpg"
                     alt="Hyundai Hackathon Award"
                     fill
                     className="object-cover"
-                    unoptimized
                   />
                 </div>
               </div>

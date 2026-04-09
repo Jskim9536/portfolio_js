@@ -59,10 +59,10 @@ export default function HeroSection() {
         <div className="aspect-[4/5] rounded-full overflow-hidden bg-surface-container-high relative">
           <Image
             className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-            src="https://lh3.googleusercontent.com/aida/ADBb0ujRQ0MBfTZ-dMHXdfm4rldSOHI59Sv9HdRZrxTq1GugoaJhc6xLM-Yck1InGgA6XFbhW386Y8wUgU_z89040p6JIRoBva9mdzA4IOqxJwiZW5EryZDSVU7EhqyahRVj6aEzCqB9C2zSwPyFehNdZSQfa5zYtZ-uj0QyM8cnumDoNuHkU-vEb48NMui1NPoFLWSlTSctS4rbyzV6fd4zfghaQpw3dfBP-BOJcjzfewaQjXNhJuPgK7h-vCxEoQWX_1dHAuSwyFkUmA"
+            src="/img/portoflio_main.png"
             alt="Professional portrait of Junseok Kim"
             fill
-            unoptimized
+            priority
           />
         </div>
       </motion.div>
