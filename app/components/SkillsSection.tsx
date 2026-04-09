@@ -50,16 +50,6 @@ export default function SkillsSection() {
               <AnimateIn delay={0.2}>
                 <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
-                    UNIST (울산과학기술원)
-                  </h4>
-                  <p className="text-xs text-on-surface-variant font-light">
-                    기계항공공학 전공
-                  </p>
-                </div>
-              </AnimateIn>
-              <AnimateIn delay={0.25}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
-                  <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     L&apos;Oreal BigBang Digital Winner
                   </h4>
                   <p className="text-xs text-on-surface-variant font-light">
@@ -67,13 +57,23 @@ export default function SkillsSection() {
                   </p>
                 </div>
               </AnimateIn>
-              <AnimateIn delay={0.35}>
+              <AnimateIn delay={0.3}>
                 <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     Hyundai Hackathon 1st Place
                   </h4>
                   <p className="text-xs text-on-surface-variant font-light">
                     Autonomous Driving UX Concept (2017)
+                  </p>
+                </div>
+              </AnimateIn>
+              <AnimateIn delay={0.4}>
+                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
+                  <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
+                    UNIST (울산과학기술원)
+                  </h4>
+                  <p className="text-xs text-on-surface-variant font-light">
+                    기계항공공학 전공
                   </p>
                 </div>
               </AnimateIn>
