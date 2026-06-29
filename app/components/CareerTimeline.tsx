@@ -5,7 +5,7 @@ const careers = [
     period: "2026.01 ~ Now",
     company: "에바 (Evar)",
     role: "서비스 기획 (PM/PO)",
-    desc: "전기차 충전 솔루션 서비스 기획 및 프로덕트 매니징",
+    desc: "전기차 충전 솔루션의 서비스 기획과 프로덕트 매니징을 담당하며, AI 기반 업무 체계로 문제 정의부터 실행까지의 속도를 높이고 있습니다.",
     isActive: true,
   },
   {
