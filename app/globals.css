@@ -77,6 +77,8 @@ body {
   background-color: #f8f9fa;
   color: #191c1d;
   font-weight: 300;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .glass-nav {

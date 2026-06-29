@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JUNSEOK KIM | PM/PO Portfolio",
+  title: "JUNSEOK KIM | AI-Native Product Owner",
   description:
-    "안녕하세요, 일을 되게 만드는 서비스 기획자 김준석입니다.",
+    "AI로 실행의 속도와 밀도를 높여 비즈니스 성장을 만드는 PM/PO 김준석입니다.",
 };
 
 export default function RootLayout({

@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="flex gap-8">
           <a
             className="hover:text-primary transition-all opacity-70 hover:opacity-100"
-            href="https://linkedin.com/in/junseok-kim"
+            href="https://www.linkedin.com/in/junseok-kim-2611351b6/"
             target="_blank"
             rel="noopener noreferrer"
           >
