@@ -21,11 +21,9 @@ export default function HeroSection() {
         </motion.span>
         <motion.h1
           {...fadeUp(0.2)}
-          className="text-5xl md:text-7xl tracking-tighter text-[#1a2540] mb-4 md:mb-6 leading-[0.9] font-medium"
+          className="text-5xl md:text-7xl tracking-tighter text-[#1a2540] mb-4 md:mb-6 leading-[0.9] font-medium whitespace-nowrap"
         >
-          JUNSEOK
-          <br />
-          KIM
+          JunSeok KIM
         </motion.h1>
         <motion.p {...fadeUp(0.35)} className="text-lg md:text-2xl font-light text-secondary mb-4 md:mb-6">
           Founder-Minded, AI-Native Product Owner
@@ -34,9 +32,8 @@ export default function HeroSection() {
           {...fadeUp(0.45)}
           className="text-base md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-8 md:mb-10 font-light"
         >
-          안녕하세요, <br />
-          AI로 실행의 속도와 밀도를 높여 <br />
-          비즈니스 성장을 만드는 PM/PO 김준석입니다.
+          안녕하세요, AI로 실행의 속도와 밀도를 높여 비즈니스 성장을 만드는
+          PM/PO 김준석입니다.
         </motion.p>
         <motion.div {...fadeUp(0.55)} className="flex flex-wrap gap-3 md:gap-4">
           <a
