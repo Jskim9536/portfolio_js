@@ -17,7 +17,7 @@ export default function HeroSection() {
           {...fadeUp(0.1)}
           className="text-primary font-bold tracking-widest text-[10px] md:text-xs uppercase mb-3 md:mb-4 block"
         >
-          PRODUCT OWNER · PM/PO · 6 YEARS EXPERIENCE
+          AI-NATIVE PRODUCT OWNER · PM/PO · 6 YEARS EXPERIENCE
         </motion.span>
         <motion.h1
           {...fadeUp(0.2)}
@@ -28,15 +28,15 @@ export default function HeroSection() {
           KIM
         </motion.h1>
         <motion.p {...fadeUp(0.35)} className="text-lg md:text-2xl font-light text-secondary mb-4 md:mb-6">
-          Founder-Minded Product Owner &amp; Problem Solver
+          Founder-Minded, AI-Native Product Owner
         </motion.p>
         <motion.p
           {...fadeUp(0.45)}
           className="text-base md:text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-8 md:mb-10 font-light"
         >
           안녕하세요, <br />
-          비즈니스 성장을 만들어내는 기획자(PM/PO) <br />
-          김준석입니다.
+          AI로 실행의 속도와 밀도를 높여 <br />
+          비즈니스 성장을 만드는 PM/PO 김준석입니다.
         </motion.p>
         <motion.div {...fadeUp(0.55)} className="flex flex-wrap gap-3 md:gap-4">
           <a

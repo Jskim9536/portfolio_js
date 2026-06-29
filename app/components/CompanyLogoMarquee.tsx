@@ -5,6 +5,12 @@ import AnimateIn from "./AnimateIn";
 
 const companies = [
   {
+    name: "EVAR",
+    logo: "/img/evar-logo.png",
+    width: 165,
+    height: 42,
+  },
+  {
     name: "Hyundai Motor Company",
     logo: "/img/hyundai_logo.png",
     width: 210,

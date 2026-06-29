@@ -21,8 +21,8 @@ export default function PhilosophySection() {
         <div className="col-span-12 md:col-span-8">
           <AnimateIn delay={0.1}>
             <p className="text-base md:text-xl leading-relaxed text-on-surface-variant mb-8 md:mb-12 font-light">
-              창업가 마인드셋을 바탕으로 문제를 정의하고,
-              린 사이클을 통해 빠른 실행으로 비즈니스 성장을 이끕니다.
+              창업가 마인드셋과 AI-native 업무 방식을 바탕으로 문제를 정의하고,
+              린 사이클과 AI를 통해 실행의 속도를 높여 비즈니스 성장을 이끕니다.
               3년간 93회 문제 정의, 15회 가설 검증 실험을 통해 체화한 실행
               중심형 PM/PO입니다.
             </p>
