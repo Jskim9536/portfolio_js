@@ -1,8 +1,8 @@
 import AnimateIn from "./AnimateIn";
 
 const approaches = [
-  { num: "01", title: "Zero-to-One Execution",     desc: "무에서 유를 만드는 비즈니스 기획 및 런칭 역량" },
-  { num: "02", title: "Data-Driven Decision",      desc: "지표 분석을 통한 정교한 의사결정 및 솔루션 도출" },
+  { num: "01", title: "Zero to One Execution",     desc: "무에서 유를 만드는 비즈니스 기획 및 런칭 역량" },
+  { num: "02", title: "Data Driven Decision",      desc: "지표 분석을 통한 정교한 의사결정 및 솔루션 도출" },
   { num: "03", title: "Lean & Hypothesis Testing", desc: "빠른 가설 검증과 피드백 루프를 통한 프로덕트 최적화" },
   { num: "04", title: "Growth Strategy",           desc: "비즈니스 임팩트를 극대화하는 성장 엔진 설계" },
 ];
@@ -21,7 +21,7 @@ export default function PhilosophySection() {
         <div className="col-span-12 md:col-span-8">
           <AnimateIn delay={0.1}>
             <p className="text-base md:text-xl leading-[1.75] text-on-surface-variant mb-8 md:mb-12 font-normal text-balance">
-              창업가 마인드셋과 AI-native 업무 방식을 바탕으로 문제를 정의하고,
+              창업가 마인드셋과 AI native 업무 방식을 바탕으로 문제를 정의하고,
               린 사이클과 AI를 통해 실행의 속도를 높여 비즈니스 성장을 이끕니다.
               3년간 93회 문제 정의, 15회 가설 검증 실험을 통해 체화한 실행
               중심형 PM/PO입니다.

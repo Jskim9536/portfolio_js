@@ -5,7 +5,7 @@ import CountUp from "./CountUp";
 
 const stats = [
   { value: "+70%", title: "파트너 네트워크 성장", desc: "마카롱팩토리 입점 퍼널 개선" },
-  { value: "3x",   title: "글로벌 매출 성장",    desc: "영국→미국/호주/캐나다 확장" },
+  { value: "3x",   title: "글로벌 매출 성장",    desc: "영국, 미국, 호주, 캐나다 확장" },
   { value: "-90%", title: "운영 리소스 절감",    desc: "물류 WMS 고도화 시스템" },
   { value: "-33.3%", title: "파트너 VoC 감소",  desc: "재고·정산 앱 개선" },
 ];

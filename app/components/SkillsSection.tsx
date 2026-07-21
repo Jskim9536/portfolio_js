@@ -43,7 +43,7 @@ export default function SkillsSection() {
                   Competencies
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["Agile/Sprint", "Lean Startup", "Data-Driven"].map((comp, i) => (
+                  {["Agile/Sprint", "Lean Startup", "Data Driven"].map((comp, i) => (
                     <AnimateIn key={comp} delay={0.2 + i * 0.07}>
                       <span className="interactive-chip px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20">
                         {comp}
@@ -64,7 +64,7 @@ export default function SkillsSection() {
               <AnimateIn delay={0.2}>
                 <div className="interactive-card bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
-                    L&apos;Oreal BigBang Digital Winner
+                    L&apos;Oréal BigBang Digital Winner
                   </h4>
                   <p className="text-xs text-on-surface-variant font-normal leading-relaxed">
                     Beauty Tech &amp; AI Sector Champion (2025)
