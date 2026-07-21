@@ -11,7 +11,7 @@ export default function SkillsSection() {
             </h3>
             <div className="space-y-5 md:space-y-6">
               <div>
-                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
+                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-[0.08em]">
                   AI
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -25,7 +25,7 @@ export default function SkillsSection() {
                 </div>
               </div>
               <div>
-                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
+                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-[0.08em]">
                   Tools &amp; Tech
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -39,7 +39,7 @@ export default function SkillsSection() {
                 </div>
               </div>
               <div>
-                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-widest">
+                <p className="text-[10px] font-medium text-secondary uppercase mb-3 tracking-[0.08em]">
                   Competencies
                 </p>
                 <div className="flex flex-wrap gap-2">

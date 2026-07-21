@@ -63,7 +63,7 @@ export default function CompanyLogoMarquee() {
       <div className="mx-auto max-w-7xl px-5 md:px-8">
         <AnimateIn>
           <div className="mb-8 text-center md:mb-10">
-            <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-secondary md:text-xs">
+            <p className="text-[11px] font-medium uppercase tracking-[0.08em] text-secondary md:text-xs">
               Companies I&apos;ve Worked With
             </p>
           </div>

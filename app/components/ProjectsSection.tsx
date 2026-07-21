@@ -158,7 +158,7 @@ export default function ProjectsSection() {
           <div className="relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
             <div className="p-6 md:p-12 grid grid-cols-12 gap-4 md:gap-6 items-center">
               <div className="col-span-12 md:col-span-6">
-                <span className="text-primary-fixed-dim font-medium tracking-widest text-[10px] uppercase mb-3 block">
+                <span className="text-primary-fixed-dim font-medium tracking-[0.08em] text-[10px] uppercase mb-3 block">
                   AWARD WINNING PROJECT
                 </span>
                 <h3 className="text-2xl md:text-4xl font-semibold tracking-[-0.035em] mb-2 md:mb-4">
@@ -194,7 +194,7 @@ export default function ProjectsSection() {
           <div className="relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
             <div className="p-6 md:p-12 grid grid-cols-12 gap-4 md:gap-6 items-center">
               <div className="col-span-12 md:col-span-6 md:order-2">
-                <span className="text-primary-fixed-dim font-medium tracking-widest text-[10px] uppercase mb-3 block">
+                <span className="text-primary-fixed-dim font-medium tracking-[0.08em] text-[10px] uppercase mb-3 block">
                   AWARD WINNING PROJECT
                 </span>
                 <h3 className="text-2xl md:text-4xl font-semibold tracking-[-0.035em] mb-2 md:mb-4">
@@ -239,7 +239,7 @@ export default function ProjectsSection() {
           <div className="relative group overflow-hidden rounded-xl bg-[#1a2540] text-white">
             <div className="p-6 md:p-12 grid grid-cols-12 gap-4 md:gap-6 items-center">
               <div className="col-span-12 md:col-span-6">
-                <span className="text-primary-fixed-dim font-medium tracking-widest text-[10px] uppercase mb-3 block">
+                <span className="text-primary-fixed-dim font-medium tracking-[0.08em] text-[10px] uppercase mb-3 block">
                   AWARD WINNING PROJECT
                 </span>
                 <h3 className="text-2xl md:text-4xl font-semibold tracking-[-0.035em] mb-2 md:mb-4">
