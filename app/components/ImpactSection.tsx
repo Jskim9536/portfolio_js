@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 import CountUp from "./CountUp";
 
@@ -13,6 +13,7 @@ const stats = [
 export default function ImpactSection() {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const shouldReduceMotion = useReducedMotion() ?? false;
 
   return (
     <section ref={ref} className="py-12 md:py-20 border-t border-outline-variant/10 max-w-7xl mx-auto px-5 md:px-8">
@@ -20,21 +21,25 @@ export default function ImpactSection() {
         {stats.map((stat, i) => (
           <motion.div
             key={stat.title}
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: shouldReduceMotion ? 0 : 16 }}
             animate={inView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.5, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
-            className="flex flex-col gap-2 md:gap-3 p-5 md:p-8 rounded-2xl bg-surface-container-low border border-outline-variant/10 transition-colors hover:bg-surface-container"
+            transition={{
+              duration: shouldReduceMotion ? 0.18 : 0.42,
+              delay: shouldReduceMotion ? 0 : i * 0.06,
+              ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+            }}
+            className="interactive-card flex flex-col gap-2 md:gap-3 p-5 md:p-8 rounded-xl bg-surface-container-low border border-outline-variant/10 hover:bg-surface-container"
           >
             <div className="flex items-center gap-2">
               <CountUp
                 value={stat.value}
-                className="text-3xl md:text-5xl font-light-custom text-on-surface tracking-tighter"
+                className="text-3xl md:text-5xl font-light-custom text-on-surface tracking-[-0.045em]"
               />
               <div className="w-1.5 h-1.5 rounded-full bg-primary/40 shrink-0" />
             </div>
             <div>
-              <p className="font-medium text-sm md:text-lg text-[#1a2540] mb-0.5 md:mb-1">{stat.title}</p>
-              <p className="text-xs md:text-sm font-light text-on-surface-variant">{stat.desc}</p>
+              <p className="font-medium text-sm md:text-lg text-[#1a2540] mb-0.5 md:mb-1 tracking-[-0.01em]">{stat.title}</p>
+              <p className="text-xs md:text-sm font-normal text-on-surface-variant leading-relaxed">{stat.desc}</p>
             </div>
           </motion.div>
         ))}

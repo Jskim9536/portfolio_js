@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, useReducedMotion } from "framer-motion";
 import { useRef } from "react";
 
 interface AnimateInProps {
@@ -17,11 +17,12 @@ export default function AnimateIn({
 }: AnimateInProps) {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const shouldReduceMotion = useReducedMotion() ?? false;
 
   const initial = {
     opacity: 0,
-    y: direction === "up" ? 30 : 0,
-    x: direction === "left" ? -30 : direction === "right" ? 30 : 0,
+    y: shouldReduceMotion ? 0 : direction === "up" ? 18 : 0,
+    x: shouldReduceMotion ? 0 : direction === "left" ? -18 : direction === "right" ? 18 : 0,
   };
 
   return (
@@ -30,7 +31,11 @@ export default function AnimateIn({
       className={className}
       initial={initial}
       animate={inView ? { opacity: 1, y: 0, x: 0 } : initial}
-      transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+      transition={{
+        duration: shouldReduceMotion ? 0.2 : 0.46,
+        delay: shouldReduceMotion ? 0 : delay,
+        ease: [0.23, 1, 0.32, 1] as [number, number, number, number],
+      }}
     >
       {children}
     </motion.div>
