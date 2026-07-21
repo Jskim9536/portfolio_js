@@ -1,5 +1,5 @@
 "use client";
-import { useInView, useMotionValue, useSpring, animate } from "framer-motion";
+import { animate, useInView, useReducedMotion } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 interface CountUpProps {
@@ -10,9 +10,14 @@ interface CountUpProps {
 export default function CountUp({ value, className }: CountUpProps) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-60px" });
+  const shouldReduceMotion = useReducedMotion() ?? false;
 
   useEffect(() => {
     if (!inView || !ref.current) return;
+    if (shouldReduceMotion) {
+      ref.current.textContent = value;
+      return;
+    }
 
     // Extract numeric part and surrounding text
     const match = value.match(/^([+\-]?)(\d+\.?\d*)(.*)$/);
@@ -26,7 +31,7 @@ export default function CountUp({ value, className }: CountUpProps) {
     const suffix = match[3];
 
     const controls = animate(0, num, {
-      duration: 1.5,
+      duration: 1.1,
       ease: "easeOut",
       onUpdate(v) {
         if (ref.current) {
@@ -37,7 +42,7 @@ export default function CountUp({ value, className }: CountUpProps) {
     });
 
     return () => controls.stop();
-  }, [inView, value]);
+  }, [inView, shouldReduceMotion, value]);
 
   return (
     <span ref={ref} className={className}>

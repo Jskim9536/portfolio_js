@@ -6,7 +6,7 @@ export default function SkillsSection() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
         <AnimateIn>
           <div>
-            <h3 className="text-xl md:text-2xl font-medium mb-6 md:mb-8 text-[#1a2540]">
+            <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.025em] mb-6 md:mb-8 text-[#1a2540]">
               Technical Stack &amp; Core
             </h3>
             <div className="space-y-5 md:space-y-6">
@@ -17,7 +17,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["claude-code", "codex", "ollama"].map((tool, i) => (
                     <AnimateIn key={tool} delay={0.35 + i * 0.07}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_18px_rgba(26,37,64,0.08)]">
+                      <span className="interactive-chip px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
                         {tool}
                       </span>
                     </AnimateIn>
@@ -31,7 +31,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["SQL", "Python", "GA4", "Figma", "Notion"].map((tool, i) => (
                     <AnimateIn key={tool} delay={i * 0.05}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_18px_rgba(26,37,64,0.08)]">
+                      <span className="interactive-chip px-3 md:px-4 py-1.5 md:py-2 bg-surface-container-high rounded-full text-xs font-medium">
                         {tool}
                       </span>
                     </AnimateIn>
@@ -45,7 +45,7 @@ export default function SkillsSection() {
                 <div className="flex flex-wrap gap-2">
                   {["Agile/Sprint", "Lean Startup", "Data-Driven"].map((comp, i) => (
                     <AnimateIn key={comp} delay={0.2 + i * 0.07}>
-                      <span className="px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.03] hover:shadow-[0_8px_18px_rgba(26,37,64,0.1)]">
+                      <span className="interactive-chip px-3 md:px-4 py-1.5 md:py-2 bg-primary/10 text-primary rounded-full text-xs font-medium border border-primary/20">
                         {comp}
                       </span>
                     </AnimateIn>
@@ -57,36 +57,36 @@ export default function SkillsSection() {
         </AnimateIn>
         <AnimateIn delay={0.15}>
           <div>
-            <h3 className="text-xl md:text-2xl font-medium mb-6 md:mb-8 text-[#1a2540]">
+            <h3 className="text-xl md:text-2xl font-semibold tracking-[-0.025em] mb-6 md:mb-8 text-[#1a2540]">
               Education &amp; Honors
             </h3>
             <div className="space-y-3 md:space-y-4">
               <AnimateIn delay={0.2}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-[0_12px_28px_rgba(26,37,64,0.08)]">
+                <div className="interactive-card bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     L&apos;Oreal BigBang Digital Winner
                   </h4>
-                  <p className="text-xs text-on-surface-variant font-light">
+                  <p className="text-xs text-on-surface-variant font-normal leading-relaxed">
                     Beauty Tech &amp; AI Sector Champion (2025)
                   </p>
                 </div>
               </AnimateIn>
               <AnimateIn delay={0.3}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-[0_12px_28px_rgba(26,37,64,0.08)]">
+                <div className="interactive-card bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     Hyundai Hackathon 1st Place
                   </h4>
-                  <p className="text-xs text-on-surface-variant font-light">
+                  <p className="text-xs text-on-surface-variant font-normal leading-relaxed">
                     Autonomous Driving UX Concept (2017)
                   </p>
                 </div>
               </AnimateIn>
               <AnimateIn delay={0.4}>
-                <div className="bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10 transition-all duration-300 hover:-translate-y-0.5 hover:scale-[1.01] hover:shadow-[0_12px_28px_rgba(26,37,64,0.08)]">
+                <div className="interactive-card bg-surface-container-low p-4 md:p-6 rounded-xl border border-outline-variant/10">
                   <h4 className="font-medium mb-1 text-[#1a2540] text-sm md:text-base">
                     UNIST (울산과학기술원)
                   </h4>
-                  <p className="text-xs text-on-surface-variant font-light">
+                  <p className="text-xs text-on-surface-variant font-normal leading-relaxed">
                     기계항공공학 전공
                   </p>
                 </div>

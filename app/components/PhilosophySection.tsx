@@ -13,14 +13,14 @@ export default function PhilosophySection() {
       <div className="max-w-7xl mx-auto px-5 md:px-8 grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-4">
           <AnimateIn>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-[#1a2540] mb-4 md:mb-8">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-[-0.035em] text-[#1a2540] mb-4 md:mb-8">
               The Approach
             </h2>
           </AnimateIn>
         </div>
         <div className="col-span-12 md:col-span-8">
           <AnimateIn delay={0.1}>
-            <p className="text-base md:text-xl leading-relaxed text-on-surface-variant mb-8 md:mb-12 font-light">
+            <p className="text-base md:text-xl leading-[1.75] text-on-surface-variant mb-8 md:mb-12 font-normal text-balance">
               창업가 마인드셋과 AI-native 업무 방식을 바탕으로 문제를 정의하고,
               린 사이클과 AI를 통해 실행의 속도를 높여 비즈니스 성장을 이끕니다.
               3년간 93회 문제 정의, 15회 가설 검증 실험을 통해 체화한 실행
@@ -30,10 +30,10 @@ export default function PhilosophySection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
             {approaches.map((item, i) => (
               <AnimateIn key={item.num} delay={0.1 + i * 0.1}>
-                <div className="bg-surface-container-lowest p-5 md:p-6 rounded-xl border border-outline-variant/10 shadow-sm h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
+                <div className="interactive-card bg-surface-container-lowest p-5 md:p-6 rounded-xl border border-outline-variant/10 h-full">
                   <span className="text-primary font-medium mb-2 block text-sm">{item.num}</span>
-                  <h3 className="font-medium text-base md:text-lg mb-1 md:mb-2">{item.title}</h3>
-                  <p className="text-sm text-on-surface-variant font-light">{item.desc}</p>
+                  <h3 className="font-medium text-base md:text-lg mb-1 md:mb-2 tracking-[-0.01em]">{item.title}</h3>
+                  <p className="text-sm text-on-surface-variant font-normal leading-relaxed">{item.desc}</p>
                 </div>
               </AnimateIn>
             ))}

@@ -37,7 +37,7 @@ export default function CareerTimeline() {
       <div className="grid grid-cols-12 gap-6">
         <div className="col-span-12 md:col-span-4">
           <AnimateIn>
-            <h2 className="text-3xl md:text-4xl font-medium tracking-tight text-[#1a2540] mb-6 md:mb-8">
+            <h2 className="text-3xl md:text-4xl font-semibold tracking-[-0.035em] text-[#1a2540] mb-6 md:mb-8">
               Career Timeline
             </h2>
           </AnimateIn>
@@ -61,9 +61,9 @@ export default function CareerTimeline() {
                   <span className="text-xs md:text-sm font-medium text-secondary mb-1 block">
                     {item.period}
                   </span>
-                  <h4 className="text-base md:text-xl font-medium mb-1 text-[#1a2540]">{item.company}</h4>
+                  <h4 className="text-base md:text-xl font-medium tracking-[-0.015em] mb-1 text-[#1a2540]">{item.company}</h4>
                   <p className="text-sm text-on-surface-variant font-medium mb-1">{item.role}</p>
-                  <p className="text-xs md:text-sm text-outline font-light">{item.desc}</p>
+                  <p className="text-xs md:text-sm text-outline font-normal leading-relaxed">{item.desc}</p>
                 </div>
               </AnimateIn>
             ))}
