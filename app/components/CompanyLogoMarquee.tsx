@@ -29,7 +29,7 @@ const companies = [
     height: 34,
   },
   {
-    name: "L'Oreal",
+    name: "L'Oréal",
     logo: "/img/loreal_logo.png",
     width: 168,
     height: 30,

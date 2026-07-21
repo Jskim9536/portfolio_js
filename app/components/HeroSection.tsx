@@ -19,16 +19,16 @@ export default function HeroSection() {
           {...fadeUp(0.08, shouldReduceMotion)}
           className="text-primary font-semibold tracking-[0.18em] text-[10px] md:text-xs uppercase mb-3 md:mb-4 block max-w-[20rem] md:max-w-none leading-relaxed"
         >
-          AI-NATIVE PRODUCT OWNER · PM/PO · 6 YEARS EXPERIENCE
+          AI Native Product Owner : PM/PO : 6 Years Experience
         </motion.span>
         <motion.h1
           {...fadeUp(0.16, shouldReduceMotion)}
           className="text-[clamp(3.1rem,13vw,4.8rem)] md:text-[clamp(4.8rem,8vw,6.8rem)] tracking-[-0.055em] text-[#1a2540] mb-4 md:mb-6 leading-[0.9] font-semibold"
         >
-          JunSeok KIM
+          Junseok Kim
         </motion.h1>
         <motion.p {...fadeUp(0.26, shouldReduceMotion)} className="text-lg md:text-2xl font-medium text-secondary mb-4 md:mb-6 tracking-[-0.015em]">
-          Founder-Minded, AI-Native Product Owner
+          Founder Minded, AI Native Product Owner
         </motion.p>
         <motion.p
           {...fadeUp(0.34, shouldReduceMotion)}
@@ -58,7 +58,7 @@ export default function HeroSection() {
         <div className="aspect-[4/5] rounded-full overflow-hidden bg-surface-container-high relative shadow-[0_24px_70px_rgba(26,37,64,0.12)]">
           <Image
             className="w-full h-full object-cover"
-            src="/img/portoflio_main.png"
+            src="/img/portfolio_main.png"
             alt="Professional portrait of Junseok Kim"
             fill
             sizes="(min-width: 768px) 33vw, 0px"
