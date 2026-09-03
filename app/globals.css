@@ -394,6 +394,22 @@ body {
 .career-list h3 { font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
 .career-list p { grid-column: 3; margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 
+.recognition-section { padding: 118px 0; color: white; background: var(--ink); }
+.recognition-heading { max-width: 780px; margin-bottom: 54px; }
+.recognition-heading h2 { margin-top: 18px; font-size: clamp(36px, 4vw, 56px); line-height: 1.12; letter-spacing: -.04em; font-weight: 620; }
+.recognition-heading > p:last-child { max-width: 680px; margin-top: 22px; color: rgba(255,255,255,.62); font-size: 17px; line-height: 1.75; }
+.recognition-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.recognition-card { height: 100%; overflow: hidden; border: 1px solid rgba(255,255,255,.12); border-radius: 22px; background: rgba(255,255,255,.055); }
+.recognition-image { position: relative; aspect-ratio: 16/10; overflow: hidden; background: #26334f; }
+.recognition-image img { object-fit: cover; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.recognition-card:hover .recognition-image img { transform: scale(1.025); }
+.recognition-copy { padding: 26px 26px 28px; }
+.recognition-meta { display: flex; justify-content: space-between; gap: 16px; color: #8fb1ff; font-size: 9px; font-weight: 700; letter-spacing: .1em; }
+.recognition-meta b { color: rgba(255,255,255,.5); font-weight: 500; letter-spacing: 0; }
+.recognition-copy h3 { margin: 16px 0 12px; font-size: 23px; line-height: 1.28; letter-spacing: -.025em; font-weight: 600; }
+.recognition-copy p { min-height: 94px; color: rgba(255,255,255,.64); font-size: 13px; line-height: 1.7; }
+.recognition-copy a { display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; color: white; font-size: 12px; font-weight: 600; }
+
 .closing-section { padding: 110px 0; color: white; background: linear-gradient(135deg, #1c5cea 0%, #1242a9 100%); }
 .closing-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: end; }
 .closing-section h2 { max-width: 780px; margin-top: 18px; font-size: clamp(40px, 4.8vw, 66px); line-height: 1.1; letter-spacing: -.045em; font-weight: 620; }
@@ -424,7 +440,7 @@ body {
   .impact-item { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0 !important; }
   .impact-strip > div:nth-child(odd) .impact-item { border-right: 1px solid var(--line); }
   .impact-strip > div:nth-child(even) .impact-item { padding-left: 18px !important; }
-  .approach-section, .work-section, .foundation-section, .career-section, .closing-section { padding-top: 80px; padding-bottom: 80px; }
+  .approach-section, .work-section, .foundation-section, .career-section, .recognition-section, .closing-section { padding-top: 80px; padding-bottom: 80px; }
   .approach-grid, .career-section, .closing-grid { grid-template-columns: 1fr; gap: 50px; }
   .project-list { gap: 28px; }
   .project-card, .project-card.featured { position: relative; top: auto; grid-template-columns: 1fr; min-height: 0; }
@@ -432,6 +448,8 @@ body {
   .project-visual { grid-row: 1; min-height: 320px; }
   .contain-image { padding: 12px; }
   .foundation-grid { grid-template-columns: 1fr; }
+  .recognition-grid { grid-template-columns: 1fr; }
+  .recognition-copy p { min-height: 0; }
   .career-list article { grid-template-columns: 34px 112px 1fr; }
   .footer { flex-direction: column; }
 }

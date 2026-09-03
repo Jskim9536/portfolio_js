@@ -27,6 +27,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
             <a href="#work">{t.nav.work}</a>
             <a href="#approach">{t.nav.approach}</a>
             <a href="#career">{t.nav.career}</a>
+            <a href="#recognition">{t.nav.recognition}</a>
           </div>
           <div className="nav-actions">
             <a href={t.switchHref} className="language-switch" aria-label={locale === "ko" ? "영어로 보기" : "View in Korean"}>
@@ -44,6 +45,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
               <a href="#work" onClick={() => setMenuOpen(false)}>{t.nav.work}</a>
               <a href="#approach" onClick={() => setMenuOpen(false)}>{t.nav.approach}</a>
               <a href="#career" onClick={() => setMenuOpen(false)}>{t.nav.career}</a>
+              <a href="#recognition" onClick={() => setMenuOpen(false)}>{t.nav.recognition}</a>
               <a href="#contact" onClick={() => setMenuOpen(false)}>{t.nav.contact}</a>
             </motion.div>
           )}
@@ -144,6 +146,33 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
                 <article><span className="career-index">0{index + 1}</span><span className="career-period">{period}</span><h3>{company}</h3><p>{role}</p></article>
               </AnimateIn>
             ))}
+          </div>
+        </section>
+
+        <section className="recognition-section" id="recognition">
+          <div className="section-shell">
+            <AnimateIn className="recognition-heading">
+              <p className="eyebrow">{t.recognition.eyebrow}</p>
+              <h2>{t.recognition.title}</h2>
+              <p>{t.recognition.intro}</p>
+            </AnimateIn>
+            <div className="recognition-grid">
+              {t.recognition.items.map((item, index) => (
+                <AnimateIn key={item.title} delay={index * .07}>
+                  <article className="recognition-card">
+                    <div className="recognition-image">
+                      <Image src={item.image} alt={item.alt} fill sizes="(min-width: 900px) 30vw, 92vw" />
+                    </div>
+                    <div className="recognition-copy">
+                      <div className="recognition-meta"><span>{item.type}</span><b>{item.year}</b></div>
+                      <h3>{item.title}</h3>
+                      <p>{item.desc}</p>
+                      <a href={item.href} target="_blank" rel="noreferrer">{item.link}<span>↗</span></a>
+                    </div>
+                  </article>
+                </AnimateIn>
+              ))}
+            </div>
           </div>
         </section>
 

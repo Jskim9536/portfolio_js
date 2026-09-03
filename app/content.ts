@@ -5,7 +5,7 @@ export const copy = {
     localeName: "한국어",
     switchLabel: "EN",
     switchHref: "/en",
-    nav: { work: "프로젝트", approach: "일하는 방식", career: "경력", contact: "연락하기" },
+    nav: { work: "프로젝트", approach: "일하는 방식", career: "경력", recognition: "수상·활동", contact: "연락하기" },
     hero: {
       eyebrow: "Founder-minded, AI-native Product Owner",
       title: "Junseok Kim",
@@ -132,6 +132,16 @@ export const copy = {
       ["2021.06–2024.01", "어텀팔콘스", "Founder / Product Lead"],
       ["2020.08–2021.06", "현대자동차", "시스템 개발 PM"],
     ],
+    recognition: {
+      eyebrow: "RECOGNITION & LEADERSHIP",
+      title: "제품 성과 밖에서도 증명한 실행과 팀 리더십",
+      intro: "AI 제품 사업화, 기술 문제 해결, 그리고 팀 스포츠에서의 리더십까지—서로 다른 환경에서 결과를 만든 기록입니다.",
+      items: [
+        { year: "2025", type: "PRODUCT AWARD", title: "L’Oréal BigBang 2025 · Digital Winner", desc: "GAN 기반 가상 메이크업 제품의 3CE 협업과 글로벌 PoC를 이끌어 디지털 부문 Winner로 선정됐습니다.", image: "/img/bigbang-startup.jpg", alt: "L’Oréal BigBang 2025 수상 현장", href: "https://www.loreal.com/ko-kr/korea/loreal-korea-news/press-releases/kstartup-frenchtech-bigbang-2025/", link: "공식 기사" },
+        { year: "2017", type: "TECH AWARD", title: "Hyundai Hack A Road · 1위", desc: "초보 운전자를 위한 실시간 차량 데이터 조언 시스템을 기획하고 Python 데모를 구현해 대상을 수상했습니다.", image: "/img/hyundai_hack_a_road.jpg", alt: "현대자동차 Hack A Road 수상", href: "https://www.ksilbo.co.kr/news/articleView.html?idxno=621362", link: "관련 기사" },
+        { year: "2016", type: "TEAM LEADERSHIP", title: "제11회 대학조정대회 · 종합 3위", desc: "UNIST 조정부 활동을 통해 제11회 대학조정대회에 출전했고, 팀과 함께 대학 종합 3위를 달성했습니다.", image: "/img/rowing.jpg", alt: "UNIST 조정부 대학조정대회 출전 팀", href: "https://news.unist.ac.kr/kor/20160802-03/", link: "UNIST 기사" },
+      ],
+    },
     closing: {
       eyebrow: "WHY JUNSEOK KIM",
       title: "소수정예 팀의 제품 실행과 비즈니스 성과",
@@ -144,7 +154,7 @@ export const copy = {
     localeName: "English",
     switchLabel: "KO",
     switchHref: "/",
-    nav: { work: "Work", approach: "Approach", career: "Career", contact: "Contact" },
+    nav: { work: "Work", approach: "Approach", career: "Career", recognition: "Recognition", contact: "Contact" },
     hero: {
       eyebrow: "Founder-minded, AI-native Product Owner",
       title: "Junseok Kim",
@@ -229,6 +239,16 @@ export const copy = {
       ["2021.06–2024.01", "Autumn Falcons", "Founder / Product Lead"],
       ["2020.08–2021.06", "Hyundai Motor Company", "System Development PM"],
     ],
+    recognition: {
+      eyebrow: "RECOGNITION & LEADERSHIP",
+      title: "Execution and leadership beyond product metrics",
+      intro: "A record of delivering results across AI commercialization, technical problem-solving, and team sport.",
+      items: [
+        { year: "2025", type: "PRODUCT AWARD", title: "L’Oréal BigBang 2025 · Digital Winner", desc: "Led the 3CE collaboration and global PoC for a GAN-powered virtual makeup product, earning the Digital category award.", image: "/img/bigbang-startup.jpg", alt: "L’Oréal BigBang 2025 award ceremony", href: "https://www.loreal.com/ko-kr/korea/loreal-korea-news/press-releases/kstartup-frenchtech-bigbang-2025/", link: "Official article" },
+        { year: "2017", type: "TECH AWARD", title: "Hyundai Hack A Road · 1st Place", desc: "Designed a real-time vehicle-data guidance system for novice drivers and implemented its Python demo, winning the grand prize.", image: "/img/hyundai_hack_a_road.jpg", alt: "Hyundai Hack A Road award", href: "https://www.ksilbo.co.kr/news/articleView.html?idxno=621362", link: "Read article" },
+        { year: "2016", type: "TEAM LEADERSHIP", title: "11th Inter-University Rowing Competition · 3rd Overall", desc: "Competed as part of the UNIST rowing team and helped the university finish third overall.", image: "/img/rowing.jpg", alt: "UNIST rowing team at the inter-university competition", href: "https://news.unist.ac.kr/kor/20160802-03/", link: "UNIST article" },
+      ],
+    },
     closing: {
       eyebrow: "WHY JUNSEOK KIM",
       title: "Product execution and business outcomes for lean teams",

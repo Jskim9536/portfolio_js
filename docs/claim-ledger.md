@@ -16,6 +16,8 @@ Public copy in `app/content.ts` is downstream from `Jskim9536/js-carrer-db` at c
 | MYCLE session-to-application conversion +361%; partner network ~1,000→1,700; transaction revenue KRW 20B→30B | MYCLE Partner Strategy PO Lead, 2024 | Verified / user-provided career evidence | Career DB `index.html`, MYCLE section | Rounded network count retained |
 | 93 problems and 15+ MVP / pivot experiments; Klang 4,000 users and 17-minute average time spent; FEED100 65% CTA conversion | Autumn Falcons Founder / Product Lead, 2021–2024 | Career evidence | Career DB `index.html`, founder sections | Supporting work, not hero claim |
 | GN7 repeated validation time reduced by 20% through Python automation | Hyundai system development PM, 2020–2021 | Career evidence | Career DB `index.html`, Hyundai section | Product context uses public vehicle name only |
+| Hyundai Hack A Road 2017 first place; novice-driver real-time vehicle-data guidance concept and Python demo | Pre-career product work, 2017 | Public award coverage and resume evidence | Global-e resume v11; linked news coverage | Award restored from the original website |
+| 11th Inter-University Rowing Competition, UNIST third overall | UNIST rowing team activity, 2016 | Public university news coverage | Original website and linked UNIST article | Presented as team activity, not a professional product outcome |
 
 ## Visual provenance
 
