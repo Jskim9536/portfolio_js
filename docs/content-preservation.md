@@ -5,6 +5,8 @@ This document prevents future redesigns from silently removing public portfolio 
 | Legacy content | Current location | Status |
 | --- | --- | --- |
 | EVAR, Hyundai, MYCLE, SOOJIB, L’Oréal logos | Collaboration marquee after Career | Restored |
+| EV PAY consumer charging app and Google Play link | Product Ownership Foundation | Added from Career DB and public store evidence |
+| EV Square 2.0 / NOVA charger-management SaaS | Product Ownership Foundation | Added with a redacted product dashboard |
 | MYCLE partner growth and funnel | Selected work | Preserved and expanded |
 | MYCLE PQI and VoC reduction | Earlier Product Work | Restored |
 | SOOJIB global market expansion | Selected work, Cross-border Commerce | Preserved and expanded |

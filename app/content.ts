@@ -117,8 +117,11 @@ export const copy = {
         metricLabel: "파트너 네트워크",
       },
     ],
+    moreEyebrow: "PRODUCT OWNERSHIP FOUNDATION",
     moreTitle: "제품 오너십의 기반",
     more: [
+      { period: "2026–현재", company: "EV PAY", role: "전기차 충전자용 모바일 앱 · Product Owner", desc: "충전기의 QR 코드를 스캔해 충전을 시작하고, 실시간 충전 상태·완료 알림·이용 기록을 확인하는 사용자용 앱입니다. 제품 운영과 기능 개선을 담당하고 있습니다.", image: "/img/portfolio/evar/evpay/mypage-tmoney-reward-flow.png", alt: "EV PAY 충전 통계와 크레딧 및 회원카드 기능 화면", href: "https://play.google.com/store/apps/details?id=kr.co.evar.evpay&hl=ko", link: "Google Play에서 보기" },
+      { period: "2026", company: "EV Square 2.0 · NOVA", role: "전기차 충전기 관리 SaaS · Lead Product Manager", desc: "충전 사업자가 충전기 상태, 원격 제어, 매출·정산, 사용자 권한을 한곳에서 관리하는 기업용 소프트웨어입니다. 기존 EV Square를 여러 고객사가 사용할 수 있는 2.0 제품으로 개편했습니다.", image: "/img/portfolio/evar/evsquare/dashboard-overview.png", alt: "고객 정보가 가려진 EV Square 2.0 충전 운영 대시보드", href: "", link: "" },
       { period: "2021.06–2024.01", company: "어텀팔콘스", role: "Founder / Product Lead", desc: "93개의 고객 문제를 정의하고 15회 이상 초기 제품과 사업 방향을 검증했습니다. 캠핑 커뮤니티 Klang은 사용자 4,000명·평균 체류 17분, 공동구매 서비스 FEED100은 구매 행동 전환율 65%를 기록했습니다.", image: "/img/portfolio/founder/klang.jpg", alt: "Klang 커뮤니티 제품 화면" },
       { period: "2020.08–2021.06", company: "현대자동차", role: "시스템 개발 PM", desc: "그랜저(GN7) 디지털 계기판 플랫폼의 요구사항·협력사 이슈를 관리하고 Python 테스트 자동화로 검증 시간 20% 단축.", image: "/img/portfolio/hyundai/gn7-cluster.jpg", alt: "현대자동차 GN7 디지털 클러스터" },
       { period: "2024", company: "MYCLE 파트너 품질관리", role: "Quality System & Product Operations", desc: "제휴 정비소의 서비스 품질을 측정하는 지표(PQI)를 설계하고 재고·정산 앱을 개선해 파트너 문의와 불만을 33.3% 줄이고 품질지표를 16% 높였습니다.", image: "/img/mycle-pqi.png", alt: "MYCLE 파트너 품질지표 PQI 대시보드" },
@@ -238,8 +241,11 @@ export const copy = {
         image: "/img/portfolio/macarong/partner-landing.jpg", imageAlt: "MYCLE partner application experience", metric: "+70%", metricLabel: "Partner network growth",
       },
     ],
+    moreEyebrow: "PRODUCT OWNERSHIP FOUNDATION",
     moreTitle: "Foundations of product ownership",
     more: [
+      { period: "2026–Present", company: "EV PAY", role: "Mobile app for EV drivers · Product Owner", desc: "A consumer app for starting a charging session by scanning a charger’s QR code, checking live charging status, receiving completion alerts, and reviewing charging history. I own product operations and feature improvements.", image: "/img/portfolio/evar/evpay/mypage-tmoney-reward-flow.png", alt: "EV PAY charging statistics, credits, and membership-card features", href: "https://play.google.com/store/apps/details?id=kr.co.evar.evpay&hl=en", link: "View on Google Play" },
+      { period: "2026", company: "EV Square 2.0 · NOVA", role: "EV charger-management SaaS · Lead Product Manager", desc: "Business software for charging operators to manage charger status, remote controls, revenue and settlement, and user permissions in one place. I led the transition from EV Square to a 2.0 product designed for multiple customers.", image: "/img/portfolio/evar/evsquare/dashboard-overview.png", alt: "EV Square 2.0 charging-operations dashboard with customer information redacted", href: "", link: "" },
       { period: "2021.06–2024.01", company: "Autumn Falcons", role: "Founder / Product Lead", desc: "Defined 93 customer problems and ran more than 15 early-product and business-model experiments. Klang, a camping community, reached 4,000 users and 17 minutes average time spent; group-buying service FEED100 reached a 65% purchase-action conversion rate.", image: "/img/portfolio/founder/klang.jpg", alt: "Klang community product interface" },
       { period: "2020.08–2021.06", company: "Hyundai Motor Company", role: "System Development PM", desc: "Managed requirements and supplier issues for the Grandeur (GN7) digital cluster platform and reduced repeated validation time by 20% through Python automation.", image: "/img/portfolio/hyundai/gn7-cluster.jpg", alt: "Hyundai Grandeur GN7 digital cluster" },
       { period: "2024", company: "MYCLE Partner Quality", role: "Quality System & Product Operations", desc: "Designed a quality index for partner repair shops and improved their inventory and settlement app, reducing partner questions and complaints by 33.3% while raising the quality score by 16%.", image: "/img/mycle-pqi.png", alt: "MYCLE Partner Quality Index dashboard" },

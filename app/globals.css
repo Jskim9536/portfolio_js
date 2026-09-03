@@ -385,8 +385,11 @@ body {
 .foundation-card h3 { margin: 14px 0 4px; font-size: 30px; font-weight: 620; letter-spacing: -.03em; }
 .foundation-card > b { color: var(--muted); font-size: 12px; }
 .foundation-card > p { max-width: 580px; margin-top: 18px; color: #56617a; font-size: 14px; line-height: 1.7; }
+.foundation-card.current-product { background: #fbfcff; box-shadow: 0 16px 46px rgba(21,33,61,.07); }
+.foundation-link { position: relative; z-index: 2; display: inline-flex; align-items: center; gap: 8px; width: fit-content; margin-top: 18px; padding: 10px 13px; border-radius: 999px; color: white; background: var(--ink); box-shadow: 0 8px 20px rgba(21,33,61,.13); font-size: 11px; font-weight: 600; }
 .foundation-image { position: absolute; left: 18px; right: 18px; bottom: 18px; height: 240px; overflow: hidden; border-radius: 16px; background: #eef1f5; }
 .foundation-image img { object-fit: cover; object-position: top center; }
+.foundation-card.current-product .foundation-image img { object-fit: contain; padding: 14px; }
 
 .career-section { padding: 118px 0; display: grid; grid-template-columns: .9fr 1.1fr; gap: 100px; color: var(--ink); }
 .career-list { border-top: 1px solid var(--line); }

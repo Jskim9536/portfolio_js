@@ -115,12 +115,13 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
 
         <section className="foundation-section">
           <div className="section-shell">
-            <AnimateIn><p className="eyebrow">EARLIER PRODUCT WORK</p><h2>{t.moreTitle}</h2></AnimateIn>
+            <AnimateIn><p className="eyebrow">{t.moreEyebrow}</p><h2>{t.moreTitle}</h2></AnimateIn>
             <div className="foundation-grid">
               {t.more.map((item, index) => (
                 <AnimateIn key={item.company} delay={index * .08}>
-                  <article className="foundation-card">
+                  <article className={`foundation-card ${index < 2 ? "current-product" : ""}`}>
                     <span>{item.period}</span><h3>{item.company}</h3><b>{item.role}</b><p>{item.desc}</p>
+                    {"href" in item && item.href && <a className="foundation-link" href={item.href} target="_blank" rel="noreferrer">{item.link}<span>↗</span></a>}
                     <div className="foundation-image">
                       <Image src={item.image} alt={item.alt} fill sizes="(min-width: 900px) 42vw, 90vw" />
                     </div>
