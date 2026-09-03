@@ -281,7 +281,7 @@ body {
 .eyebrow { color: var(--blue); font-size: 11px; line-height: 1.2; font-weight: 800; letter-spacing: .13em; }
 .hero-section { position: relative; min-height: 650px; padding: 80px 0 72px; display: grid; grid-template-columns: 1.34fr .66fr; align-items: center; gap: 80px; }
 .hero-section::before { content: ""; position: absolute; z-index: -1; top: 2%; right: 12%; width: 54%; height: 70%; border-radius: 50%; background: radial-gradient(circle, rgba(116,177,255,.16), rgba(110,238,207,.08) 40%, transparent 72%); filter: blur(34px); pointer-events: none; }
-.hero-copy h1 { margin: 0 0 18px; color: var(--ink); font-size: clamp(64px, 7vw, 96px); line-height: 1; letter-spacing: -.05em; font-weight: 630; }
+.hero-copy h1 { margin: 0 0 18px; color: var(--ink); font-size: clamp(64px, 7vw, 96px); line-height: 1; letter-spacing: -.05em; font-weight: 580; }
 .hero-copy h1 span { display: block; }
 .hero-kicker { margin-bottom: 28px; color: #566683; font-size: clamp(18px, 1.8vw, 24px); line-height: 1.35; font-weight: 500; letter-spacing: -.02em; }
 .hero-body { max-width: 650px; color: #48536d; font-size: 18px; line-height: 1.78; }
