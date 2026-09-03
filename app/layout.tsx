@@ -2,9 +2,19 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "JUNSEOK KIM | AI Native Product Owner",
+  metadataBase: new URL("https://junseok.vercel.app"),
+  title: "김준석 | AI-native Product Owner",
   description:
-    "AI로 실행의 속도와 밀도를 높여 비즈니스 성장을 만드는 PM/PO 김준석입니다.",
+    "문제 정의부터 제품 출시와 운영 성과까지 연결하는 AI-native Product Owner 김준석입니다.",
+  alternates: { canonical: "/", languages: { ko: "/", en: "/en" } },
+  openGraph: {
+    title: "김준석 | AI-native Product Owner",
+    description: "문제 정의부터 제품 출시와 운영 성과까지 연결합니다.",
+    url: "https://junseok.vercel.app",
+    siteName: "Junseok Kim Portfolio",
+    locale: "ko_KR",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
@@ -25,14 +35,6 @@ export default function RootLayout({
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "wb1ucwj65s");`,
           }}
-        />
-        <link
-          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
-          rel="stylesheet"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
-          rel="stylesheet"
         />
       </head>
       <body className="bg-surface text-on-surface">
