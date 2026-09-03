@@ -12,7 +12,6 @@ export const copy = {
       body: "전기차 충전, 글로벌 커머스, AI 제품을 만들며 문제 정의부터 출시와 운영 성과까지 책임져 왔습니다. AI를 제품 개발 과정에 연결해 소수정예 팀의 실행 속도를 높이는 Product Owner 김준석입니다.",
       primary: "대표 프로젝트 보기",
       secondary: "LinkedIn",
-      status: "EVAR · AI 플랫폼 사업 태스크포스 리드",
     },
     impacts: [
       { value: "2주→1주", label: "제품 배포 주기", note: "기획·개발·품질 검증 병렬 실행" },
@@ -176,7 +175,6 @@ export const copy = {
       body: "I have taken products in EV charging, global commerce, and applied AI from problem definition through launch and operations. I use AI across the delivery process to help lean teams move faster without losing rigor.",
       primary: "View selected work",
       secondary: "LinkedIn",
-      status: "EVAR · AI Platform Business Task Force Lead",
     },
     impacts: [
       { value: "2w→1w", label: "Product release cycle", note: "Planning, engineering, and quality checks in parallel" },

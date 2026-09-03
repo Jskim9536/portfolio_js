@@ -293,8 +293,6 @@ body {
 .hero-visual { position: relative; justify-self: end; width: 100%; max-width: 390px; }
 .portrait-frame { position: relative; aspect-ratio: 4/5; overflow: hidden; border-radius: 14px; background: #e7ebf1; box-shadow: 0 24px 56px rgba(21,33,61,.12); }
 .portrait-frame img { object-fit: cover; object-position: center top; }
-.status-card { position: absolute; left: -28px; bottom: 28px; display: flex; align-items: center; gap: 9px; padding: 13px 16px; border-radius: 14px; background: rgba(255,255,255,.91); box-shadow: 0 16px 40px rgba(21,33,61,.13); backdrop-filter: blur(16px); color: var(--ink); font-size: 12px; font-weight: 700; }
-.status-pulse { width: 8px; height: 8px; border-radius: 50%; background: #2bb673; box-shadow: 0 0 0 5px rgba(43,182,115,.13); }
 
 .impact-strip { display: grid; grid-template-columns: repeat(4, 1fr); padding: 24px 0 68px; border-top: 1px solid var(--line); }
 .impact-item { min-height: 125px; padding: 28px 26px 20px 0; display: flex; flex-direction: column; gap: 18px; border-right: 1px solid var(--line); }
@@ -459,7 +457,6 @@ body {
   .hero-kicker { margin-bottom: 20px; font-size: 18px; }
   .hero-body { font-size: 16px; }
   .hero-visual { justify-self: center; max-width: 330px; }
-  .status-card { left: -8px; }
   .impact-strip { grid-template-columns: 1fr 1fr; }
   .impact-item { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0 !important; }
   .impact-strip > div:nth-child(odd) .impact-item { border-right: 1px solid var(--line); }

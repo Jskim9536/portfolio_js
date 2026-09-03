@@ -75,7 +75,6 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
             <div className="portrait-frame">
               <Image src="/img/portfolio/profile/junseok-kim-portrait.png" alt="Junseok Kim" fill priority sizes="(min-width: 900px) 35vw, 80vw" />
             </div>
-            <div className="status-card"><span className="status-pulse" />{t.hero.status}</div>
           </motion.div>
         </section>
 
