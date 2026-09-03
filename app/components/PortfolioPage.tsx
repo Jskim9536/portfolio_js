@@ -8,6 +8,14 @@ import ProjectVisual from "./ProjectVisual";
 import ScrollProgress from "./ScrollProgress";
 import { copy, type Locale } from "../content";
 
+const companies = [
+  { name: "EVAR", logo: "/img/evar-logo.png", width: 165, height: 42 },
+  { name: "Hyundai Motor Company", logo: "/img/hyundai_logo.png", width: 210, height: 28 },
+  { name: "MYCLE", logo: "/img/macarong_factory_logo.png", width: 156, height: 35 },
+  { name: "SOOJIB", logo: "/img/soojib_logo.png", width: 180, height: 34 },
+  { name: "L’Oréal", logo: "/img/loreal_logo.png", width: 168, height: 30 },
+];
+
 export default function PortfolioPage({ locale }: { locale: Locale }) {
   const t = copy[locale];
   const [menuOpen, setMenuOpen] = useState(false);
@@ -129,7 +137,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
                   <article className="foundation-card">
                     <span>{item.period}</span><h3>{item.company}</h3><b>{item.role}</b><p>{item.desc}</p>
                     <div className="foundation-image">
-                      <Image src={index === 0 ? "/img/portfolio/founder/klang.jpg" : "/img/portfolio/hyundai/gn7-cluster.jpg"} alt="" fill sizes="(min-width: 900px) 42vw, 90vw" />
+                      <Image src={item.image} alt={item.alt} fill sizes="(min-width: 900px) 42vw, 90vw" />
                     </div>
                   </article>
                 </AnimateIn>
@@ -146,6 +154,22 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
                 <article><span className="career-index">0{index + 1}</span><span className="career-period">{period}</span><h3>{company}</h3><p>{role}</p></article>
               </AnimateIn>
             ))}
+          </div>
+        </section>
+
+        <section className="collaboration-section" aria-label={t.collaborations}>
+          <AnimateIn><p>{t.collaborations}</p></AnimateIn>
+          <div className="logo-marquee" aria-hidden="true">
+            <div className="logo-track">
+              {[...companies, ...companies].map((company, index) => (
+                <div className="company-logo" key={`${company.name}-${index}`}>
+                  <Image src={company.logo} alt="" width={company.width} height={company.height} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="sr-only">
+            {companies.map((company) => <span key={company.name}>{company.name}</span>)}
           </div>
         </section>
 
@@ -173,6 +197,25 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
                 </AnimateIn>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section className="capabilities-section section-shell">
+          <AnimateIn className="capabilities-heading">
+            <p className="eyebrow">{t.capabilities.eyebrow}</p>
+            <h2>{t.capabilities.title}</h2>
+          </AnimateIn>
+          <div className="capabilities-grid">
+            <div className="tool-groups">
+              {t.capabilities.groups.map((group, index) => (
+                <AnimateIn key={group.label} delay={index * .06}>
+                  <article className="tool-group"><p>{group.label}</p><div>{group.items.map((item) => <span key={item}>{item}</span>)}</div></article>
+                </AnimateIn>
+              ))}
+            </div>
+            <AnimateIn delay={.12}>
+              <article className="education-card"><p>{t.capabilities.educationLabel}</p><h3>{t.capabilities.educationTitle}</h3><span>{t.capabilities.educationDesc}</span></article>
+            </AnimateIn>
           </div>
         </section>
 

@@ -394,6 +394,17 @@ body {
 .career-list h3 { font-size: 19px; font-weight: 600; letter-spacing: -.02em; }
 .career-list p { grid-column: 3; margin-top: 5px; color: var(--muted); font-size: 12px; line-height: 1.55; }
 
+.collaboration-section { overflow: hidden; padding: 68px 0 76px; border-top: 1px solid var(--line); background: white; }
+.collaboration-section > div:first-child p { margin-bottom: 34px; color: var(--muted); text-align: center; font-size: 11px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; }
+.logo-marquee { position: relative; overflow: hidden; }
+.logo-marquee::before, .logo-marquee::after { content: ""; position: absolute; z-index: 2; inset-block: 0; width: min(12vw, 150px); pointer-events: none; }
+.logo-marquee::before { left: 0; background: linear-gradient(90deg, white, transparent); }
+.logo-marquee::after { right: 0; background: linear-gradient(-90deg, white, transparent); }
+.logo-track { display: flex; width: max-content; animation: logo-drift 28s linear infinite; }
+.company-logo { width: 240px; height: 64px; display: grid; place-items: center; padding: 12px 34px; }
+.company-logo img { max-width: 100%; max-height: 38px; width: auto; height: auto; object-fit: contain; filter: grayscale(1); opacity: .72; }
+@keyframes logo-drift { to { transform: translateX(-50%); } }
+
 .recognition-section { padding: 118px 0; color: white; background: var(--ink); }
 .recognition-heading { max-width: 780px; margin-bottom: 54px; }
 .recognition-heading h2 { margin-top: 18px; font-size: clamp(36px, 4vw, 56px); line-height: 1.12; letter-spacing: -.04em; font-weight: 620; }
@@ -409,6 +420,19 @@ body {
 .recognition-copy h3 { margin: 16px 0 12px; font-size: 23px; line-height: 1.28; letter-spacing: -.025em; font-weight: 600; }
 .recognition-copy p { min-height: 94px; color: rgba(255,255,255,.64); font-size: 13px; line-height: 1.7; }
 .recognition-copy a { display: inline-flex; align-items: center; gap: 7px; margin-top: 20px; color: white; font-size: 12px; font-weight: 600; }
+
+.capabilities-section { padding-top: 112px; padding-bottom: 112px; color: var(--ink); }
+.capabilities-heading { max-width: 760px; }
+.capabilities-heading h2 { margin-top: 18px; font-size: clamp(36px, 4vw, 56px); line-height: 1.12; letter-spacing: -.04em; font-weight: 620; }
+.capabilities-grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 72px; margin-top: 54px; }
+.tool-groups { border-top: 1px solid var(--line); }
+.tool-group { display: grid; grid-template-columns: 150px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--line); }
+.tool-group > p, .education-card > p { color: var(--blue); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+.tool-group > div { display: flex; flex-wrap: wrap; gap: 8px; }
+.tool-group span { padding: 8px 11px; border: 1px solid var(--line); border-radius: 8px; background: white; color: #47536b; font-size: 12px; font-weight: 550; }
+.education-card { height: 100%; min-height: 260px; padding: 34px; border-radius: 22px; background: #eef2f7; display: flex; flex-direction: column; }
+.education-card h3 { margin-top: auto; font-size: 27px; line-height: 1.3; letter-spacing: -.025em; font-weight: 600; }
+.education-card span { margin-top: 10px; color: var(--muted); font-size: 14px; }
 
 .closing-section { padding: 110px 0; color: white; background: linear-gradient(135deg, #1c5cea 0%, #1242a9 100%); }
 .closing-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: 80px; align-items: end; }
@@ -440,7 +464,7 @@ body {
   .impact-item { border-right: 0; border-bottom: 1px solid var(--line); padding-left: 0 !important; }
   .impact-strip > div:nth-child(odd) .impact-item { border-right: 1px solid var(--line); }
   .impact-strip > div:nth-child(even) .impact-item { padding-left: 18px !important; }
-  .approach-section, .work-section, .foundation-section, .career-section, .recognition-section, .closing-section { padding-top: 80px; padding-bottom: 80px; }
+  .approach-section, .work-section, .foundation-section, .career-section, .recognition-section, .capabilities-section, .closing-section { padding-top: 80px; padding-bottom: 80px; }
   .approach-grid, .career-section, .closing-grid { grid-template-columns: 1fr; gap: 50px; }
   .project-list { gap: 28px; }
   .project-card, .project-card.featured { position: relative; top: auto; grid-template-columns: 1fr; min-height: 0; }
@@ -450,6 +474,8 @@ body {
   .foundation-grid { grid-template-columns: 1fr; }
   .recognition-grid { grid-template-columns: 1fr; }
   .recognition-copy p { min-height: 0; }
+  .capabilities-grid { grid-template-columns: 1fr; gap: 28px; }
+  .company-logo { width: 190px; }
   .career-list article { grid-template-columns: 34px 112px 1fr; }
   .footer { flex-direction: column; }
 }
@@ -471,4 +497,10 @@ body {
   .career-list article { grid-template-columns: 30px 1fr; }
   .career-period { grid-column: 2; }
   .career-list h3, .career-list p { grid-column: 2; }
+  .tool-group { grid-template-columns: 1fr; gap: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-track { animation: none; }
+  .recognition-image img { transition: none; }
 }
