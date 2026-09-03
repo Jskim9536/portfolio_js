@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
+import ApproachScene from "./ApproachScene";
 import ProjectVisual from "./ProjectVisual";
 import ScrollProgress from "./ScrollProgress";
 import { copy, type Locale } from "../content";
@@ -86,22 +87,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
           ))}
         </section>
 
-        <section className="approach-section" id="approach">
-          <div className="section-shell approach-grid">
-            <AnimateIn className="section-heading">
-              <p className="eyebrow">{t.approach.eyebrow}</p>
-              <h2>{t.approach.title}</h2>
-              <p>{t.approach.intro}</p>
-            </AnimateIn>
-            <div className="approach-list">
-              {t.approach.items.map(([num, title, body], index) => (
-                <AnimateIn key={num} delay={index * .08}>
-                  <article className="approach-item"><span>{num}</span><div><h3>{title}</h3><p>{body}</p></div></article>
-                </AnimateIn>
-              ))}
-            </div>
-          </div>
-        </section>
+        <ApproachScene copy={t.approach} />
 
         <section className="work-section section-shell" id="work">
           <AnimateIn className="work-heading">
