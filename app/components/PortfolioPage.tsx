@@ -68,7 +68,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
             <p className="hero-kicker">{t.hero.eyebrow}</p>
             <p className="hero-body">{t.hero.body}</p>
             <div className="hero-actions">
-              <a href="#work" className="primary-button">{t.hero.primary}<span>↘</span></a>
+              <a href="#work" className="primary-button">{t.hero.primary}</a>
               <a href="https://www.linkedin.com/in/junseok-kim-2611351b6/" target="_blank" rel="noreferrer" className="text-link">{t.hero.secondary} ↗</a>
             </div>
           </motion.div>
