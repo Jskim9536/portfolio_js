@@ -4,6 +4,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
+import ProjectVisual from "./ProjectVisual";
+import ScrollProgress from "./ScrollProgress";
 import { copy, type Locale } from "../content";
 
 export default function PortfolioPage({ locale }: { locale: Locale }) {
@@ -17,6 +19,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
 
   return (
     <>
+      <ScrollProgress />
       <header className="site-header">
         <nav className="site-nav" aria-label={locale === "ko" ? "주요 메뉴" : "Main navigation"}>
           <a href="#top" className="wordmark">JUNSEOK KIM</a>
@@ -50,8 +53,8 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
       <main id="top">
         <section className="hero-section section-shell">
           <motion.div className="hero-copy" initial={{ opacity: 0, y: reduced ? 0 : 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .6 }}>
-            <p className="eyebrow">{t.hero.eyebrow}</p>
             <h1>{t.hero.title.split("\n").map((line) => <span key={line}>{line}</span>)}</h1>
+            <p className="hero-kicker">{t.hero.eyebrow}</p>
             <p className="hero-body">{t.hero.body}</p>
             <div className="hero-actions">
               <a href="#work" className="primary-button">{t.hero.primary}<span>↘</span></a>
@@ -102,15 +105,13 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
               <AnimateIn key={project.id}>
                 <article className={`project-card ${index === 0 ? "featured" : ""}`}>
                   <div className="project-copy">
-                    <div><p className="project-label">{project.label}</p><span className="project-company">{project.company}</span></div>
+                    <div className="project-meta"><div><p className="project-label">{project.label}</p><span className="project-company">{project.company}</span></div><span className="project-number">0{index + 1}</span></div>
                     <h3>{project.title}</h3>
                     <p className="project-summary">{project.summary}</p>
                     <ul>{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
                     <div className="project-metric"><strong>{project.metric}</strong><span>{project.metricLabel}</span></div>
                   </div>
-                  <figure className="project-visual">
-                    <Image src={project.image} alt={project.imageAlt} fill sizes="(min-width: 900px) 52vw, 94vw" className="contain-image" />
-                  </figure>
+                  <ProjectVisual id={project.id} image={project.image} imageAlt={project.imageAlt} />
                 </article>
               </AnimateIn>
             ))}
