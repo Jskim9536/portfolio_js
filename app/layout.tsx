@@ -23,9 +23,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko" style={{ colorScheme: "light" }}>
+    <html lang="ko" suppressHydrationWarning>
       <head>
-        <meta name="color-scheme" content="light" />
+        <meta name="color-scheme" content="light dark" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("portfolio-theme")||"system";var r=t==="system"?(matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light"):t;document.documentElement.dataset.theme=t;document.documentElement.dataset.resolvedTheme=r}catch(e){document.documentElement.dataset.theme="system"}`,
+          }}
+        />
         <script
           type="text/javascript"
           dangerouslySetInnerHTML={{

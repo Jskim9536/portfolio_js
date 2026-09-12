@@ -38,7 +38,6 @@ export default function ApproachScene({ copy }: { copy: ApproachCopy }) {
           {copy.items.map(([num, title, body], index) => (
             <AnimateIn key={num} delay={index * .1}>
               <article className="approach-item">
-                <span>{num}</span>
                 <div><h3>{title}</h3><p>{body}</p></div>
               </article>
             </AnimateIn>

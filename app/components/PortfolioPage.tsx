@@ -1,7 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import { SlidersHorizontal } from "@phosphor-icons/react";
+import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import AnimateIn from "./AnimateIn";
 import ApproachScene from "./ApproachScene";
@@ -17,14 +20,89 @@ const companies = [
   { name: "L’Oréal", logo: "/img/loreal_logo.png", width: 168, height: 30 },
 ];
 
+type ThemePreference = "light" | "dark" | "system";
+
 export default function PortfolioPage({ locale }: { locale: Locale }) {
+  const [languageSelection, setLanguageSelection] = useState<Locale>(locale);
   const t = copy[locale];
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [preferencesOpen, setPreferencesOpen] = useState(false);
+  const [theme, setTheme] = useState<ThemePreference>("system");
+  const preferencesRef = useRef<HTMLDivElement>(null);
+  const languageTimerRef = useRef<number | null>(null);
+  const themeInitializedRef = useRef(false);
   const reduced = useReducedMotion() ?? false;
 
   useEffect(() => {
     document.documentElement.lang = locale;
+    const reopenPreferences = window.sessionStorage.getItem("portfolio-preferences-open") === "true";
+    window.sessionStorage.removeItem("portfolio-preferences-open");
+    const frame = window.requestAnimationFrame(() => {
+      setLanguageSelection(locale);
+      if (reopenPreferences) setPreferencesOpen(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
   }, [locale]);
+
+  useEffect(() => {
+    return () => {
+      if (languageTimerRef.current !== null) window.clearTimeout(languageTimerRef.current);
+    };
+  }, []);
+
+  const selectLanguage = (nextLocale: Locale) => {
+    setLanguageSelection(nextLocale);
+    if (languageTimerRef.current !== null) window.clearTimeout(languageTimerRef.current);
+    if (nextLocale === locale) {
+      window.sessionStorage.removeItem("portfolio-preferences-open");
+      return;
+    }
+
+    window.sessionStorage.setItem("portfolio-preferences-open", "true");
+    languageTimerRef.current = window.setTimeout(() => {
+      router.push(nextLocale === "ko" ? "/" : "/en");
+      languageTimerRef.current = null;
+    }, reduced ? 0 : 440);
+  };
+
+  useEffect(() => {
+    if (!themeInitializedRef.current) {
+      themeInitializedRef.current = true;
+      const savedTheme = document.documentElement.dataset.theme;
+      if ((savedTheme === "light" || savedTheme === "dark" || savedTheme === "system") && savedTheme !== theme) {
+        const frame = window.requestAnimationFrame(() => setTheme(savedTheme));
+        return () => window.cancelAnimationFrame(frame);
+      }
+    }
+
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const applyTheme = () => {
+      const resolved = theme === "system" ? (media.matches ? "dark" : "light") : theme;
+      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.resolvedTheme = resolved;
+      window.localStorage.setItem("portfolio-theme", theme);
+    };
+
+    applyTheme();
+    media.addEventListener("change", applyTheme);
+    return () => media.removeEventListener("change", applyTheme);
+  }, [theme]);
+
+  useEffect(() => {
+    const closePreferences = (event: PointerEvent) => {
+      if (!preferencesRef.current?.contains(event.target as Node)) setPreferencesOpen(false);
+    };
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setPreferencesOpen(false);
+    };
+    document.addEventListener("pointerdown", closePreferences);
+    document.addEventListener("keydown", closeOnEscape);
+    return () => {
+      document.removeEventListener("pointerdown", closePreferences);
+      document.removeEventListener("keydown", closeOnEscape);
+    };
+  }, []);
 
   return (
     <>
@@ -39,18 +117,74 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
             <a href="#recognition">{t.nav.recognition}</a>
           </div>
           <div className="nav-actions">
-            <a href={t.switchHref} className="language-switch" aria-label={locale === "ko" ? "영어로 보기" : "View in Korean"}>
-              <span className="language-dot" />{t.switchLabel}
-            </a>
+            <div
+              className="preferences"
+              ref={preferencesRef}
+              onPointerEnter={(event) => {
+                if (event.pointerType === "mouse") setPreferencesOpen(true);
+              }}
+              onFocusCapture={() => setPreferencesOpen(true)}
+            >
+              <button
+                className="preferences-trigger"
+                type="button"
+                aria-label={locale === "ko" ? "언어 및 화면 설정" : "Language and appearance"}
+                aria-haspopup="dialog"
+                aria-expanded={preferencesOpen}
+                aria-controls="preferences-panel"
+                onClick={() => setPreferencesOpen(true)}
+              >
+                <SlidersHorizontal size={20} weight="regular" aria-hidden="true" />
+              </button>
+              <AnimatePresence>
+                {preferencesOpen && (
+                  <motion.div
+                    id="preferences-panel"
+                    className="preferences-panel"
+                    role="dialog"
+                    aria-label={locale === "ko" ? "언어 및 화면 설정" : "Language and appearance"}
+                    initial={{ opacity: 0, y: reduced ? 0 : -6, scale: reduced ? 1 : .98 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: reduced ? 0 : -4 }}
+                    transition={{ duration: .16 }}
+                  >
+                    <div className="preference-group">
+                      <p>{locale === "ko" ? "언어" : "Language"}</p>
+                      <div className="segmented-control" data-selected={languageSelection}>
+                        <Link href="/" aria-current={languageSelection === "ko" ? "page" : undefined} onClick={(event) => { event.preventDefault(); selectLanguage("ko"); }}>한국어</Link>
+                        <Link href="/en" aria-current={languageSelection === "en" ? "page" : undefined} onClick={(event) => { event.preventDefault(); selectLanguage("en"); }}>English</Link>
+                      </div>
+                    </div>
+                    <div className="preference-group">
+                      <p>{locale === "ko" ? "화면" : "Appearance"}</p>
+                      <div className="segmented-control theme-control" data-selected={theme}>
+                        {(["light", "dark", "system"] as const).map((value) => (
+                          <button
+                            key={value}
+                            type="button"
+                            aria-pressed={theme === value}
+                            onClick={() => setTheme(value)}
+                          >
+                            {locale === "ko"
+                              ? { light: "라이트", dark: "다크", system: "시스템" }[value]
+                              : { light: "Light", dark: "Dark", system: "Auto" }[value]}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
             <a href="#contact" className="nav-contact">{t.nav.contact}</a>
-            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-label="Menu">
+            <button className="menu-button" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen} aria-controls="mobile-navigation" aria-label="Menu">
               <span /><span />
             </button>
           </div>
         </nav>
         <AnimatePresence>
           {menuOpen && (
-            <motion.div className="mobile-nav" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
+            <motion.div id="mobile-navigation" className="mobile-nav" initial={{ opacity: 0, y: reduced ? 0 : -8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }}>
               <a href="#work" onClick={() => setMenuOpen(false)}>{t.nav.work}</a>
               <a href="#approach" onClick={() => setMenuOpen(false)}>{t.nav.approach}</a>
               <a href="#career" onClick={() => setMenuOpen(false)}>{t.nav.career}</a>
@@ -91,7 +225,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
 
         <section className="work-section section-shell" id="work">
           <AnimateIn className="work-heading">
-            <p className="eyebrow">CASE STUDIES · 2020–2026</p>
+            <p className="section-context">CASE STUDIES 2020-2026</p>
             <h2>{t.selected}</h2>
             <p>{t.projectIntro}</p>
           </AnimateIn>
@@ -100,7 +234,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
               <AnimateIn key={project.id}>
                 <article className={`project-card ${index === 0 ? "featured" : ""}`}>
                   <div className="project-copy">
-                    <div className="project-meta"><div><p className="project-label">{project.label}</p><span className="project-company">{project.company}</span></div><span className="project-number">0{index + 1}</span></div>
+                    <div className="project-meta"><div><p className="project-label">{project.label}</p><span className="project-company">{project.company}</span></div></div>
                     <h3>{project.title}</h3>
                     <p className="project-summary">{project.summary}</p>
                     <ul>{project.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>
@@ -115,7 +249,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
 
         <section className="foundation-section">
           <div className="section-shell">
-            <AnimateIn><p className="eyebrow">{t.moreEyebrow}</p><h2>{t.moreTitle}</h2></AnimateIn>
+            <AnimateIn><h2>{t.moreTitle}</h2></AnimateIn>
             <div className="foundation-grid">
               {t.more.map((item, index) => (
                 <AnimateIn key={item.company} delay={index * .08}>
@@ -133,7 +267,7 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
         </section>
 
         <section className="career-section section-shell" id="career">
-          <AnimateIn className="career-heading"><p className="eyebrow">CAREER THROUGHLINE</p><h2>{t.careerTitle}</h2><p>{t.careerIntro}</p></AnimateIn>
+          <AnimateIn className="career-heading"><h2>{t.careerTitle}</h2><p>{t.careerIntro}</p></AnimateIn>
           <div className="career-list">
             {t.careers.map(([period, company, role], index) => (
               <AnimateIn key={company} delay={index * .05} direction="left">
@@ -169,17 +303,19 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
             <div className="recognition-grid">
               {t.recognition.items.map((item, index) => (
                 <AnimateIn key={item.title} delay={index * .07}>
-                  <article className="recognition-card">
-                    <div className="recognition-image">
-                      <Image src={item.image} alt={item.alt} fill sizes="(min-width: 900px) 30vw, 92vw" />
-                    </div>
-                    <div className="recognition-copy">
-                      <div className="recognition-meta"><span>{item.type}</span><b>{item.year}</b></div>
-                      <h3>{item.title}</h3>
-                      <p>{item.desc}</p>
-                      <a href={item.href} target="_blank" rel="noreferrer">{item.link}<span>↗</span></a>
-                    </div>
-                  </article>
+                  <a className="recognition-card-link" href={item.href} target="_blank" rel="noreferrer" aria-label={`${item.title}: ${item.link}`}>
+                    <article className="recognition-card">
+                      <div className="recognition-image">
+                        <Image src={item.image} alt={item.alt} fill sizes="(min-width: 900px) 30vw, 92vw" />
+                      </div>
+                      <div className="recognition-copy">
+                        <div className="recognition-meta"><span>{item.type}</span><b>{item.year}</b></div>
+                        <h3>{item.title}</h3>
+                        <p>{item.desc}</p>
+                        <span className="recognition-link-label">{item.link}<span>↗</span></span>
+                      </div>
+                    </article>
+                  </a>
                 </AnimateIn>
               ))}
             </div>
@@ -188,7 +324,6 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
 
         <section className="capabilities-section section-shell">
           <AnimateIn className="capabilities-heading">
-            <p className="eyebrow">{t.capabilities.eyebrow}</p>
             <h2>{t.capabilities.title}</h2>
           </AnimateIn>
           <div className="capabilities-grid">
@@ -200,21 +335,36 @@ export default function PortfolioPage({ locale }: { locale: Locale }) {
               ))}
             </div>
             <AnimateIn delay={.12}>
-              <article className="education-card"><p>{t.capabilities.educationLabel}</p><h3>{t.capabilities.educationTitle}</h3><span>{t.capabilities.educationDesc}</span></article>
+              <article className="education-card">
+                <p>{t.capabilities.educationLabel}</p>
+                <div className="education-logo">
+                  <Image
+                    src="/img/portfolio/education/unist-logo.png"
+                    alt={locale === "ko" ? "울산과학기술원 UNIST 로고" : "UNIST logo"}
+                    width={500}
+                    height={238}
+                    sizes="(min-width: 900px) 28vw, 72vw"
+                  />
+                </div>
+                <div className="education-copy">
+                  <h3>{t.capabilities.educationTitle}</h3>
+                  <span>{t.capabilities.educationDesc}</span>
+                </div>
+              </article>
             </AnimateIn>
           </div>
         </section>
 
         <section className="closing-section" id="contact">
           <div className="section-shell closing-grid">
-            <AnimateIn><p className="eyebrow">{t.closing.eyebrow}</p><h2>{t.closing.title}</h2></AnimateIn>
+            <AnimateIn><h2>{t.closing.title}</h2></AnimateIn>
             <AnimateIn delay={.1} className="closing-copy"><p>{t.closing.body}</p><a href="mailto:jskim9536@gmail.com" className="light-button">{t.closing.button}<span>↗</span></a></AnimateIn>
           </div>
         </section>
       </main>
 
       <footer className="footer section-shell">
-        <div><b>JUNSEOK KIM</b><span>{t.footnote}</span></div>
+        <div><b>JUNSEOK KIM</b></div>
         <div><a href="mailto:jskim9536@gmail.com">Email</a><a href="https://www.linkedin.com/in/junseok-kim-2611351b6/" target="_blank" rel="noreferrer">LinkedIn</a><a href={t.switchHref}>{t.localeName === "한국어" ? "English" : "한국어"}</a></div>
       </footer>
     </>
